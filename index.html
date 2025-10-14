@@ -3572,6 +3572,24 @@ Sent from Portfolio Contact Form
         }
       }
 
+      // Smooth scrolling for navigation links
+      function initSmoothScrolling() {
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      }
+
       // Initialize all functions
       function init() {
         initLoadingScreen();
@@ -3585,6 +3603,7 @@ Sent from Portfolio Contact Form
         initAdvancedScrollAnimations();
         initTimelineAnimation();
         initProjectFiltering();
+        initSkillTagInteractions(); // Add skill animations
         //initMouseInteraction();
         init3DTiltEffect();
         initTypingAnimation();
@@ -3596,14 +3615,6 @@ Sent from Portfolio Contact Form
 
       // Start everything when the page loads
       document.addEventListener("DOMContentLoaded", init);
-
-      // Service Worker for PWA capabilities (optional)
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          // Uncomment to enable service worker
-          // navigator.serviceWorker.register('/sw.js');
-        });
-      }
 
       // Service Worker for PWA capabilities (optional)
       if ("serviceWorker" in navigator) {
