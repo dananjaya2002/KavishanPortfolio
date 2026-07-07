@@ -11,6 +11,9 @@
       "title": "Real-Time Voice Control System",
       "category": "AI & Machine Learning",
       "filter": "ai-ml",
+      "featured": true,
+      "image": "",
+      "accent": "green",
       "description": "A modern AI-powered voice control system that lets users control a computer, browser, and media players using natural voice commands, powered by OpenAI Whisper and Silero VAD.",
       "tags": ["Python", "Speech Recognition", "Audio Processing", "Speech-to-Text"],
       "links": [
@@ -25,6 +28,9 @@
       "title": "Service Advertising Mobile App",
       "category": "Mobile Applications",
       "filter": "mobile",
+      "featured": false,
+      "image": "",
+      "accent": "blue",
       "description": "A Flutter mobile application with Firebase backend that connects customers with service providers. Customers can find, view, bookmark, chat with, and rate service providers.",
       "tags": ["Flutter", "Dart", "Firebase", "NoSQL"],
       "links": [
@@ -39,6 +45,9 @@
       "title": "AGROW - Smart Agriculture IoT Solution",
       "category": "Mobile Applications",
       "filter": "mobile",
+      "featured": true,
+      "image": "",
+      "accent": "lime",
       "description": "AGROW bridges modern technology with agriculture, enabling farmers to monitor soil conditions in real time and receive intelligent fertilizer recommendations through IoT sensors.",
       "tags": ["Flutter", "Dart", "Firebase", "IoT"],
       "links": [
@@ -53,6 +62,9 @@
       "title": "Air Quality Display and Management Web Application",
       "category": "Web Applications",
       "filter": "web",
+      "featured": false,
+      "image": "",
+      "accent": "cyan",
       "description": "An interactive web application for real-time air quality monitoring in Colombo. Users can view detailed air quality information while administrators manage sensor data and user access.",
       "tags": ["ASP.NET Core MVC", "EF Core", "SQL Server", "Razor Pages"],
       "links": [

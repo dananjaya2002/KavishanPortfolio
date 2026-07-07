@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Icon } from "../iconMap.jsx";
+import Reveal from "./Reveal.jsx";
+import SectionHeader from "./SectionHeader.jsx";
 
 const initialForm = {
   firstName: "",
@@ -10,7 +12,7 @@ const initialForm = {
   message: "",
 };
 
-function Contact({ contact }) {
+function Contact({ contact, resume, onResumeOpen }) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState({ type: "idle", message: "" });
 
@@ -68,13 +70,10 @@ function Contact({ contact }) {
 
   return (
     <section id="contact" className="section">
-      <div className="section-heading">
-        <p className="eyebrow">Contact</p>
-        <h2>{contact.title}</h2>
-      </div>
+      <SectionHeader eyebrow="Contact" title={contact.title} intro={contact.intro} />
       <div className="contact-layout">
-        <aside className="contact-panel">
-          <p>{contact.intro}</p>
+        <Reveal as="aside" className="contact-panel glass-card">
+          <p>Reach out for collaborations, internships, software projects, or AI/mobile ideas worth building.</p>
           <div className="contact-details">
             {contact.details.map((item) => (
               <div className="contact-item" key={item.label}>
@@ -82,7 +81,11 @@ function Contact({ contact }) {
                 <div>
                   <span>{item.label}</span>
                   {item.href ? (
-                    <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+                    <a
+                      href={item.href}
+                      target={item.href.startsWith("http") ? "_blank" : undefined}
+                      rel="noreferrer"
+                    >
                       {item.value}
                     </a>
                   ) : (
@@ -99,8 +102,12 @@ function Contact({ contact }) {
               </a>
             ))}
           </div>
-        </aside>
-        <form className="contact-form" onSubmit={submitForm}>
+          <button className="button secondary resume-contact" type="button" onClick={onResumeOpen}>
+            <Icon name="Download" />
+            Download / View {resume.label}
+          </button>
+        </Reveal>
+        <Reveal as="form" className="contact-form glass-card" delay={120} onSubmit={submitForm}>
           <div className="form-row">
             <label>
               First Name
@@ -148,7 +155,7 @@ function Contact({ contact }) {
             {status.type === "loading" ? "Sending..." : "Send Message"}
           </button>
           {status.message && <p className={`form-status ${status.type}`}>{status.message}</p>}
-        </form>
+        </Reveal>
       </div>
     </section>
   );

@@ -11,5 +11,19 @@
     { "label": "Focus", "value": "AI, ML, Mobile Apps" },
     { "label": "Based In", "value": "Colombo, Sri Lanka" },
     { "label": "Open To", "value": "Projects & Roles" }
+  ],
+  "techInterests": [
+    "React",
+    "Flutter",
+    "Python",
+    "Machine Learning",
+    "Firebase",
+    "Docker",
+    "Cloud Platforms"
+  ],
+  "facts": [
+    "I enjoy turning rough product ideas into usable software.",
+    "I like working across the full stack, from UI to backend logic.",
+    "I am especially interested in AI-powered everyday tools."
   ]
 }

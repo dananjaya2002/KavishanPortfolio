@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Icon } from "../iconMap.jsx";
+import Reveal from "./Reveal.jsx";
+import SectionHeader from "./SectionHeader.jsx";
 
 function Projects({ projects }) {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -10,11 +12,11 @@ function Projects({ projects }) {
 
   return (
     <section id="projects" className="section">
-      <div className="section-heading project-heading">
-        <div>
-          <p className="eyebrow">Selected work</p>
-          <h2>{projects.title}</h2>
-        </div>
+      <SectionHeader
+        eyebrow="Selected work"
+        title={projects.title}
+        intro="A compact look at projects across AI, mobile applications, IoT ideas, and web systems."
+      >
         <div className="filter-group" aria-label="Project filters">
           {projects.filters.map((filter) => (
             <button
@@ -27,10 +29,19 @@ function Projects({ projects }) {
             </button>
           ))}
         </div>
-      </div>
+      </SectionHeader>
       <div className="projects-grid">
-        {visibleProjects.map((project) => (
-          <article className="project-card" key={project.title}>
+        {visibleProjects.map((project, index) => (
+          <Reveal
+            as="article"
+            className={`project-card glass-card ${project.featured ? "is-featured" : ""}`}
+            delay={index * 90}
+            key={project.title}
+          >
+            <div className={`project-preview accent-${project.accent || "green"}`}>
+              {project.image ? <img src={project.image} alt="" loading="lazy" /> : <span>{project.title.slice(0, 2)}</span>}
+              {project.featured && <strong>Featured</strong>}
+            </div>
             <span className="project-category">{project.category}</span>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
@@ -47,8 +58,11 @@ function Projects({ projects }) {
                   <Icon name="ArrowUpRight" size={16} />
                 </a>
               ))}
+              {!project.links.some((link) => /demo/i.test(link.label)) && (
+                <span className="demo-placeholder">Live demo not added yet</span>
+              )}
             </div>
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>

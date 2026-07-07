@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Icon } from "../iconMap.jsx";
+import Reveal from "./Reveal.jsx";
 
 function Hero({ profile, onResumeOpen }) {
   const [activeText, setActiveText] = useState(profile.title);
@@ -15,14 +16,17 @@ function Hero({ profile, onResumeOpen }) {
 
   return (
     <section id="home" className="hero section">
-      <div className="hero-copy">
-        <p className="eyebrow">Portfolio / Computer Science</p>
+      <div className="hero-orbits" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+      <Reveal className="hero-copy">
+        <p className="eyebrow">Software Developer / Portfolio</p>
         <h1>{profile.name}</h1>
         <p className="hero-title">{activeText}</p>
-        <p className="hero-summary">
-          Building practical software across AI, mobile apps, and web systems with a focus on
-          clear user experiences and real-world problem solving.
-        </p>
+        <p className="hero-role">{profile.role}</p>
+        <p className="hero-summary">{profile.summary}</p>
         <div className="hero-actions">
           {profile.cta.map((item) => (
             <a key={item.href} className={`button ${item.variant}`} href={item.href}>
@@ -35,21 +39,30 @@ function Hero({ profile, onResumeOpen }) {
             {profile.resume.label}
           </button>
         </div>
-      </div>
-      <div className="hero-panel" aria-label="Portfolio highlights">
-        <div>
-          <span className="panel-label">Current focus</span>
-          <strong>Machine Learning + Mobile Experiences</strong>
+        <div className="social-links hero-socials">
+          {profile.socials.map((social) => (
+            <a key={social.href} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
+              <Icon name={social.icon} />
+            </a>
+          ))}
         </div>
-        <div>
-          <span className="panel-label">Project stack</span>
-          <strong>Python / Flutter / Firebase / React</strong>
+      </Reveal>
+      <Reveal className="hero-panel glass-card" delay={120}>
+        <div className="avatar-card">
+          <span>DK</span>
+          <p>Developer profile</p>
         </div>
+        {profile.stats.map((stat) => (
+          <div key={stat.label}>
+            <span className="panel-label">{stat.label}</span>
+            <strong>{stat.value}</strong>
+          </div>
+        ))}
         <div className="hero-metric">
           <strong>4</strong>
           <span>Featured projects</span>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

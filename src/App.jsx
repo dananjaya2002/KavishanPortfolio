@@ -2,14 +2,17 @@ import { useEffect, useState } from "react";
 import profile from "./data/profile.json";
 import about from "./data/about.json";
 import skills from "./data/skills.json";
+import experience from "./data/experience.json";
 import projects from "./data/projects.json";
 import contact from "./data/contact.json";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
+import Experience from "./components/Experience.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 import ResumeModal from "./components/ResumeModal.jsx";
 
 function App() {
@@ -33,13 +36,11 @@ function App() {
         <Hero profile={profile} onResumeOpen={() => setIsResumeOpen(true)} />
         <About about={about} />
         <Skills skills={skills} />
+        <Experience experience={experience} />
         <Projects projects={projects} />
-        <Contact contact={contact} />
+        <Contact contact={contact} resume={profile.resume} onResumeOpen={() => setIsResumeOpen(true)} />
       </main>
-      <footer className="site-footer">
-        <span>{profile.name}</span>
-        <span>Built with React, Vite, and JSON-managed content.</span>
-      </footer>
+      <Footer profile={profile} />
       <ResumeModal
         resume={profile.resume}
         isOpen={isResumeOpen}

@@ -2,6 +2,8 @@
   "brand": "DK.Dev",
   "name": "Danidu Kavishan",
   "title": "Computer Science, ML & AI Explorer",
+  "role": "Software Developer focused on AI, mobile, and practical web systems",
+  "summary": "I build useful software across machine learning, mobile applications, and web platforms, with a strong interest in clean user experiences and technology that solves real-world problems.",
   "typingText": [
     "Machine Learning Explorer",
     "Data Science Explorer",
@@ -15,15 +17,32 @@
   },
   "cta": [
     {
-      "label": "Explore My Work",
+      "label": "View Projects",
       "href": "#projects",
       "variant": "primary",
       "icon": "Rocket"
     },
     {
-      "label": "Get In Touch",
+      "label": "Contact Me",
       "href": "#contact",
       "variant": "secondary",
+      "icon": "Mail"
+    }
+  ],
+  "socials": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/dananjaya2002",
+      "icon": "Github"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/danidu-kavishan-a2b31126b/",
+      "icon": "Linkedin"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:kavishandananjaya2002@gmail.com",
       "icon": "Mail"
     }
   ],
@@ -31,7 +50,13 @@
     { "label": "Home", "href": "#home" },
     { "label": "About", "href": "#about" },
     { "label": "Skills", "href": "#skills" },
+    { "label": "Experience", "href": "#experience" },
     { "label": "Projects", "href": "#projects" },
     { "label": "Contact", "href": "#contact" }
+  ],
+  "stats": [
+    { "label": "Core areas", "value": "AI / Mobile / Web" },
+    { "label": "Main stack", "value": "Python, Flutter, React" },
+    { "label": "Location", "value": "Colombo, Sri Lanka" }
   ]
 }

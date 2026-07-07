@@ -1,0 +1,45 @@
+{
+  "title": "Experience",
+  "intro": "A timeline of the practical software work, academic development, and project experience shaping my developer journey.",
+  "items": [
+    {
+      "title": "Computer Science Undergraduate",
+      "company": "Academic & Personal Development",
+      "dates": "2022 - Present",
+      "location": "Sri Lanka",
+      "description": "Building a broad foundation across software engineering, data, mobile applications, and AI-focused systems.",
+      "achievements": [
+        "Developed practical projects across AI, mobile, desktop, and web application domains.",
+        "Explored machine learning, Docker, cloud platforms, and agile development workflows.",
+        "Strengthened full-stack fundamentals through academic and independent project work."
+      ],
+      "technologies": ["Python", "React", "Flutter", "Firebase", "SQL", "Docker"]
+    },
+    {
+      "title": "Mobile Application Developer",
+      "company": "Project-Based Work",
+      "dates": "2023 - Present",
+      "location": "Remote / Sri Lanka",
+      "description": "Designing and building mobile applications with Flutter, React Native, Firebase, and user-focused interaction flows.",
+      "achievements": [
+        "Built a service advertising application connecting customers and service providers.",
+        "Created AGROW, a smart agriculture mobile concept using IoT sensor data and recommendations.",
+        "Implemented authentication, data storage, chat, bookmarking, ratings, and provider workflows."
+      ],
+      "technologies": ["Flutter", "Dart", "React Native", "Firebase", "NoSQL"]
+    },
+    {
+      "title": "AI & Web Systems Builder",
+      "company": "Independent Projects",
+      "dates": "2024 - Present",
+      "location": "Colombo, Sri Lanka",
+      "description": "Experimenting with AI-powered assistants, voice interfaces, and web dashboards for real-world information systems.",
+      "achievements": [
+        "Built a voice control system using OpenAI Whisper, speech recognition, and audio processing.",
+        "Contributed to an air-quality monitoring web application with admin and user workflows.",
+        "Focused on making technical systems easier to interact with through practical interfaces."
+      ],
+      "technologies": ["Python", "OpenAI Whisper", "ASP.NET Core", "SQL Server", "Razor Pages"]
+    }
+  ]
+}
