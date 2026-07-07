@@ -1,0 +1,55 @@
+{
+  "title": "Skills & Technologies",
+  "categories": [
+    {
+      "title": "AI & Machine Learning",
+      "icon": "Brain",
+      "skills": [
+        { "name": "Python", "level": 95 },
+        { "name": "Machine Learning", "level": 90 },
+        { "name": "Speech Recognition", "level": 85 },
+        { "name": "OpenAI Whisper", "level": 88 },
+        { "name": "Audio Processing", "level": 83 },
+        { "name": "Silero VAD", "level": 80 }
+      ]
+    },
+    {
+      "title": "Mobile Development",
+      "icon": "Smartphone",
+      "skills": [
+        { "name": "Flutter", "level": 92 },
+        { "name": "React Native", "level": 90 },
+        { "name": "Firebase", "level": 85 },
+        { "name": "NoSQL", "level": 82 },
+        { "name": "Provider", "level": 82 },
+        { "name": "State Management", "level": 82 }
+      ]
+    },
+    {
+      "title": "Development & Tools",
+      "icon": "Database",
+      "skills": [
+        { "name": "SQL", "level": 90 },
+        { "name": "Flask/FastAPI", "level": 85 },
+        { "name": "Docker", "level": 78 },
+        { "name": "Google Cloud", "level": 80 },
+        { "name": "Git/GitHub", "level": 88 },
+        { "name": "Expo", "level": 88 },
+        { "name": "Android Studio", "level": 88 }
+      ]
+    },
+    {
+      "title": "Programming Languages",
+      "icon": "Code2",
+      "skills": [
+        { "name": "Python", "level": 95 },
+        { "name": "Dart", "level": 85 },
+        { "name": "SQL", "level": 90 },
+        { "name": "TypeScript", "level": 75 },
+        { "name": "JavaScript", "level": 75 },
+        { "name": "Java", "level": 70 },
+        { "name": "C#", "level": 65 }
+      ]
+    }
+  ]
+}

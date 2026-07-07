@@ -1,0 +1,67 @@
+{
+  "title": "Featured Projects",
+  "filters": [
+    { "label": "All Projects", "value": "all" },
+    { "label": "AI & Machine Learning", "value": "ai-ml" },
+    { "label": "Mobile Applications", "value": "mobile" },
+    { "label": "Web Applications", "value": "web" }
+  ],
+  "items": [
+    {
+      "title": "Real-Time Voice Control System",
+      "category": "AI & Machine Learning",
+      "filter": "ai-ml",
+      "description": "A modern AI-powered voice control system that lets users control a computer, browser, and media players using natural voice commands, powered by OpenAI Whisper and Silero VAD.",
+      "tags": ["Python", "Speech Recognition", "Audio Processing", "Speech-to-Text"],
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/dananjaya2002/realtime-voice-assistant",
+          "icon": "Github"
+        }
+      ]
+    },
+    {
+      "title": "Service Advertising Mobile App",
+      "category": "Mobile Applications",
+      "filter": "mobile",
+      "description": "A Flutter mobile application with Firebase backend that connects customers with service providers. Customers can find, view, bookmark, chat with, and rate service providers.",
+      "tags": ["Flutter", "Dart", "Firebase", "NoSQL"],
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/dananjaya2002/flutter_service_advertising_app",
+          "icon": "Github"
+        }
+      ]
+    },
+    {
+      "title": "AGROW - Smart Agriculture IoT Solution",
+      "category": "Mobile Applications",
+      "filter": "mobile",
+      "description": "AGROW bridges modern technology with agriculture, enabling farmers to monitor soil conditions in real time and receive intelligent fertilizer recommendations through IoT sensors.",
+      "tags": ["Flutter", "Dart", "Firebase", "IoT"],
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/dananjaya2002/agrow-iot-app",
+          "icon": "Github"
+        }
+      ]
+    },
+    {
+      "title": "Air Quality Display and Management Web Application",
+      "category": "Web Applications",
+      "filter": "web",
+      "description": "An interactive web application for real-time air quality monitoring in Colombo. Users can view detailed air quality information while administrators manage sensor data and user access.",
+      "tags": ["ASP.NET Core MVC", "EF Core", "SQL Server", "Razor Pages"],
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/Mithila001/Air_Quality_Monitoring_Website",
+          "icon": "Github"
+        }
+      ]
+    }
+  ]
+}

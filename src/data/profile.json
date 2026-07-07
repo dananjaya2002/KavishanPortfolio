@@ -1,0 +1,37 @@
+{
+  "brand": "DK.Dev",
+  "name": "Danidu Kavishan",
+  "title": "Computer Science, ML & AI Explorer",
+  "typingText": [
+    "Machine Learning Explorer",
+    "Data Science Explorer",
+    "AI Research Enthusiast",
+    "Desktop & Mobile Application Developer"
+  ],
+  "resume": {
+    "label": "My Resume",
+    "path": "/documents/Danidu_Kavishan_CV.pdf",
+    "downloadName": "Danidu_Kavishan_CV.pdf"
+  },
+  "cta": [
+    {
+      "label": "Explore My Work",
+      "href": "#projects",
+      "variant": "primary",
+      "icon": "Rocket"
+    },
+    {
+      "label": "Get In Touch",
+      "href": "#contact",
+      "variant": "secondary",
+      "icon": "Mail"
+    }
+  ],
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "About", "href": "#about" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Contact", "href": "#contact" }
+  ]
+}

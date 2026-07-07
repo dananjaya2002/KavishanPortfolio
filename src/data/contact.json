@@ -1,0 +1,48 @@
+{
+  "title": "Get In Touch",
+  "intro": "Have an opportunity, collaboration, or project idea? Send a message and I will get back to you.",
+  "recipientEmail": "kavishandananjaya2002@gmail.com",
+  "formspreeEndpoint": "https://formspree.io/f/mqabzqpb",
+  "details": [
+    {
+      "label": "Email",
+      "value": "kavishandananjaya2002@gmail.com",
+      "href": "mailto:kavishandananjaya2002@gmail.com",
+      "icon": "Mail"
+    },
+    {
+      "label": "Phone",
+      "value": "+94 70 589 4750",
+      "href": "tel:+94705894750",
+      "icon": "Phone"
+    },
+    {
+      "label": "Location",
+      "value": "Athurugiriya, Colombo, Sri Lanka",
+      "icon": "MapPin"
+    },
+    {
+      "label": "Website",
+      "value": "DaniduKavishan.site",
+      "href": "https://isaraportfolio.vercel.app/",
+      "icon": "Globe"
+    }
+  ],
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/danidu-kavishan-a2b31126b/",
+      "icon": "Linkedin"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/dananjaya2002",
+      "icon": "Github"
+    }
+  ],
+  "subjects": [
+    { "label": "Collaboration Opportunity", "value": "collaboration" },
+    { "label": "Job Opportunity", "value": "job" },
+    { "label": "Other", "value": "other" }
+  ]
+}
