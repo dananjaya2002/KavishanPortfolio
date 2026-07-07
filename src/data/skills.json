@@ -1,78 +1,63 @@
 {
-  "title": "Skills & Technologies",
+  "title": "Technical Skills",
+  "intro": "Grouped by the environments, languages, frameworks, data tools, containers, and networking platforms I work with.",
   "categories": [
     {
-      "title": "Frontend",
-      "title": "Frontend",
-      "icon": "MonitorSmartphone",
-      "skills": [
-        { "name": "React", "level": 78, "icon": "Atom" },
-        { "name": "JavaScript", "level": 75, "icon": "Braces" },
-        { "name": "TypeScript", "level": 75, "icon": "FileCode2" },
-        { "name": "HTML/CSS", "level": 86, "icon": "Layout" }
-      ]
-    },
-    {
-      "title": "Backend",
+      "title": "Systems",
       "icon": "Server",
       "skills": [
-        { "name": "Python", "level": 95, "icon": "Code2" },
-        { "name": "Flask/FastAPI", "level": 85, "icon": "Workflow" },
-        { "name": "ASP.NET Core", "level": 72, "icon": "Boxes" },
-        { "name": "REST APIs", "level": 82, "icon": "Network" }
+        { "name": "Linux", "icon": "Terminal", "badge": "https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" },
+        { "name": "Red Hat", "icon": "Server", "badge": "https://img.shields.io/badge/Red%20Hat-EE0000?style=flat-square&logo=redhat&logoColor=white" },
+        { "name": "Ubuntu", "icon": "MonitorSmartphone", "badge": "https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white" },
+        { "name": "Windows 11", "icon": "MonitorSmartphone", "badge": "https://img.shields.io/badge/Windows%2011-0078D4?style=flat-square&logo=windows11&logoColor=white" }
       ]
     },
     {
-      "title": "Mobile",
-      "icon": "Smartphone",
+      "title": "Code",
+      "icon": "Code2",
       "skills": [
-        { "name": "Flutter", "level": 92, "icon": "Smartphone" },
-        { "name": "Dart", "level": 85, "icon": "Code2" },
-        { "name": "React Native", "level": 90, "icon": "Atom" },
-        { "name": "Expo", "level": 88, "icon": "Rocket" },
-        { "name": "Provider", "level": 82, "icon": "Share2" }
+        { "name": "Python", "icon": "Code2", "badge": "https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" },
+        { "name": "JavaScript", "icon": "Braces", "badge": "https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" },
+        { "name": "TypeScript", "icon": "FileCode2", "badge": "https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" },
+        { "name": "C++", "icon": "Braces", "badge": "https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" },
+        { "name": "C", "icon": "Hash", "badge": "https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" }
       ]
     },
     {
-      "title": "Databases",
+      "title": "Frameworks & Tooling",
+      "icon": "Boxes",
+      "skills": [
+        { "name": "React", "icon": "Atom", "badge": "https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" },
+        { "name": "Vite", "icon": "Triangle", "badge": "https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" },
+        { "name": "npm", "icon": "Package", "badge": "https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white" },
+        { "name": "Flask", "icon": "Workflow", "badge": "https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" },
+        { "name": "Flutter", "icon": "Smartphone", "badge": "https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" }
+      ]
+    },
+    {
+      "title": "Data",
       "icon": "Database",
       "skills": [
-        { "name": "SQL", "level": 90, "icon": "Database" },
-        { "name": "Firebase", "level": 85, "icon": "Flame" },
-        { "name": "NoSQL", "level": 82, "icon": "Table2" },
-        { "name": "SQL Server", "level": 78, "icon": "HardDrive" }
+        { "name": "MySQL", "icon": "Database", "badge": "https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" },
+        { "name": "PostgreSQL", "icon": "Table2", "badge": "https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" },
+        { "name": "Firebase", "icon": "Flame", "badge": "https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white" }
       ]
     },
     {
-      "title": "Cloud & DevOps",
-      "icon": "Cloud",
+      "title": "Containers",
+      "icon": "Container",
       "skills": [
-        { "name": "Docker", "level": 78, "icon": "Container" },
-        { "name": "Google Cloud", "level": 80, "icon": "Cloud" },
-        { "name": "Vercel", "level": 78, "icon": "Triangle" },
-        { "name": "GitHub", "level": 88, "icon": "Github" }
+        { "name": "Docker", "icon": "Container", "badge": "https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" },
+        { "name": "Docker Compose", "icon": "Boxes", "badge": "https://img.shields.io/badge/Docker%20Compose-2496ED?style=flat-square&logo=docker&logoColor=white" },
+        { "name": "Podman", "icon": "Container", "badge": "https://img.shields.io/badge/Podman-892CA0?style=flat-square&logo=podman&logoColor=white" }
       ]
     },
     {
-      "title": "AI & ML",
-      "icon": "Brain",
+      "title": "Network & Platforms",
+      "icon": "Network",
       "skills": [
-        { "name": "Machine Learning", "level": 90, "icon": "Brain" },
-        { "name": "OpenAI Whisper", "level": 88, "icon": "AudioLines" },
-        { "name": "Speech Recognition", "level": 85, "icon": "Mic" },
-        { "name": "Audio Processing", "level": 83, "icon": "Waveform" },
-        { "name": "Silero VAD", "level": 80, "icon": "Activity" }
-      ]
-    },
-    {
-      "title": "Languages",
-      "icon": "Languages",
-      "skills": [
-        { "name": "Python", "level": 95, "icon": "Code2" },
-        { "name": "Dart", "level": 85, "icon": "Code2" },
-        { "name": "SQL", "level": 90, "icon": "Database" },
-        { "name": "Java", "level": 70, "icon": "Coffee" },
-        { "name": "C#", "level": 65, "icon": "Hash" }
+        { "name": "OpenShift", "icon": "Cloud", "badge": "https://img.shields.io/badge/OpenShift-EE0000?style=flat-square&logo=redhatopenshift&logoColor=white" },
+        { "name": "Cloudflare", "icon": "Globe", "badge": "https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" }
       ]
     }
   ]

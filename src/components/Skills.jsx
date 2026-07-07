@@ -8,7 +8,7 @@ function Skills({ skills }) {
       <SectionHeader
         eyebrow="Capabilities"
         title={skills.title}
-        intro="A practical toolkit across product interfaces, mobile apps, data, AI, and deployment workflows."
+        intro={skills.intro}
       />
       <div className="skills-grid">
         {skills.categories.map((category, index) => (
@@ -20,16 +20,14 @@ function Skills({ skills }) {
             <div className="skill-list">
               {category.skills.map((skill) => (
                 <div className="skill-row" key={skill.name}>
-                  <div>
-                    <span>
-                      <Icon name={skill.icon} size={16} />
-                      {skill.name}
-                    </span>
-                    <small>{skill.level}%</small>
-                  </div>
-                  <div className="skill-track" aria-hidden="true">
-                    <span style={{ width: `${skill.level}%` }} />
-                  </div>
+                  {skill.badge ? (
+                    <img className="shield-badge" src={skill.badge} alt={skill.name} loading="lazy" />
+                  ) : (
+                    <>
+                      <Icon name={skill.icon} size={17} />
+                      <span>{skill.name}</span>
+                    </>
+                  )}
                 </div>
               ))}
             </div>

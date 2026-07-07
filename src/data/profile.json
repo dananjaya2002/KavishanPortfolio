@@ -1,9 +1,9 @@
 {
   "brand": "DK.Dev",
   "name": "Danidu Kavishan",
-  "title": "Computer Science, ML & AI Explorer",
-  "role": "Software Developer focused on AI, mobile, and practical web systems",
-  "summary": "I build useful software across machine learning, mobile applications, and web platforms, with a strong interest in clean user experiences and technology that solves real-world problems.",
+  "title": "Software Developer",
+  "role": "AI, mobile, web, and systems-focused developer",
+  "summary": "I build practical software with clean interfaces, reliable tooling, and real-world problem solving.",
   "typingText": [
     "Machine Learning Explorer",
     "Data Science Explorer",
@@ -33,17 +33,20 @@
     {
       "label": "GitHub",
       "href": "https://github.com/dananjaya2002",
-      "icon": "Github"
+      "icon": "Github",
+      "badge": "https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"
     },
     {
       "label": "LinkedIn",
       "href": "https://www.linkedin.com/in/danidu-kavishan-a2b31126b/",
-      "icon": "Linkedin"
+      "icon": "Linkedin",
+      "badge": "https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"
     },
     {
       "label": "Email",
       "href": "mailto:kavishandananjaya2002@gmail.com",
-      "icon": "Mail"
+      "icon": "Mail",
+      "badge": "https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white"
     }
   ],
   "nav": [
@@ -54,9 +57,5 @@
     { "label": "Projects", "href": "#projects" },
     { "label": "Contact", "href": "#contact" }
   ],
-  "stats": [
-    { "label": "Core areas", "value": "AI / Mobile / Web" },
-    { "label": "Main stack", "value": "Python, Flutter, React" },
-    { "label": "Location", "value": "Colombo, Sri Lanka" }
-  ]
+  "focus": ["AI", "Mobile", "Web", "Systems"]
 }

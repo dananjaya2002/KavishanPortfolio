@@ -365,6 +365,23 @@ h3 {
   font-size: 1.03rem;
 }
 
+.hero-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--space-3);
+}
+
+.hero-focus span {
+  border: 1px solid rgba(124, 255, 178, 0.2);
+  border-radius: 999px;
+  background: rgba(124, 255, 178, 0.08);
+  color: var(--primary);
+  padding: 7px 11px;
+  font-size: 0.84rem;
+  font-weight: 850;
+}
+
 .hero-actions {
   flex-wrap: wrap;
   gap: 12px;
@@ -415,6 +432,32 @@ h3 {
   gap: 18px;
   padding: var(--space-3);
   overflow: hidden;
+}
+
+.hero-panel.compact {
+  align-self: center;
+  max-width: 360px;
+}
+
+.hero-panel.compact > span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border: 1px solid rgba(124, 255, 178, 0.24);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(124, 255, 178, 0.2), rgba(102, 200, 255, 0.13));
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 950;
+}
+
+.hero-panel.compact > strong {
+  position: relative;
+  max-width: 260px;
+  font-size: 1.28rem;
+  line-height: 1.35;
 }
 
 .hero-panel::before {
@@ -617,42 +660,47 @@ h3 {
 
 .skill-list {
   display: grid;
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
-.skill-row > div:first-child {
+.skill-row {
   display: flex;
-  justify-content: space-between;
-  gap: var(--space-2);
-  margin-bottom: 8px;
-}
-
-.skill-row span {
-  display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.035);
+  padding: 9px 10px;
+  color: var(--soft);
+  font-weight: 800;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
 }
 
-.skill-row span svg {
+.shield-badge {
+  display: block;
+  max-width: 100%;
+  height: 28px;
+  object-fit: contain;
+}
+
+.skill-row:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124, 255, 178, 0.24);
+  background: var(--surface-hover);
+}
+
+.skill-row svg {
+  flex: 0 0 auto;
   color: var(--accent);
 }
 
-.skill-row small {
-  color: var(--muted);
-}
-
-.skill-track {
-  height: 8px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(128, 142, 160, 0.22);
-}
-
-.skill-track span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+.skill-row span {
+  overflow-wrap: anywhere;
 }
 
 .timeline {
@@ -879,16 +927,25 @@ h3 {
 }
 
 .social-links a {
-  display: inline-grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 42px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  padding: 7px;
   transition:
     transform 180ms ease,
     background-color 180ms ease,
     border-color 180ms ease;
+}
+
+.social-badge {
+  display: block;
+  height: 24px;
+  max-width: 112px;
+  object-fit: contain;
 }
 
 .social-links a:hover {
@@ -990,8 +1047,8 @@ textarea:focus {
 }
 
 .social-links.compact a {
-  width: 38px;
-  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
 }
 
 .back-to-top {
@@ -1134,6 +1191,7 @@ textarea:focus {
   }
 
   .skills-grid,
+  .skill-list,
   .form-row {
     grid-template-columns: 1fr;
   }

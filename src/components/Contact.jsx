@@ -98,7 +98,11 @@ function Contact({ contact, resume, onResumeOpen }) {
           <div className="social-links">
             {contact.socials.map((social) => (
               <a key={social.href} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
-                <Icon name={social.icon} />
+                {social.badge ? (
+                  <img className="social-badge" src={social.badge} alt={social.label} loading="lazy" />
+                ) : (
+                  <Icon name={social.icon} />
+                )}
               </a>
             ))}
           </div>

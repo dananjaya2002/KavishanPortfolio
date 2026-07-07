@@ -32,12 +32,14 @@
     {
       "label": "LinkedIn",
       "href": "https://www.linkedin.com/in/danidu-kavishan-a2b31126b/",
-      "icon": "Linkedin"
+      "icon": "Linkedin",
+      "badge": "https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"
     },
     {
       "label": "GitHub",
       "href": "https://github.com/dananjaya2002",
-      "icon": "Github"
+      "icon": "Github",
+      "badge": "https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"
     }
   ],
   "subjects": [
