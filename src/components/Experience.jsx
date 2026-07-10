@@ -4,7 +4,7 @@ import SectionHeader from "./SectionHeader.jsx";
 
 function Experience({ experience }) {
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section section-toned">
       <SectionHeader eyebrow="Experience" title={experience.title} intro={experience.intro} />
       <div className="timeline">
         {experience.items.map((item, index) => (
@@ -20,13 +20,8 @@ function Experience({ experience }) {
               <h3>{item.title}</h3>
               <p className="timeline-company">{item.company}</p>
               <p>{item.description}</p>
-              <ul>
-                {item.achievements.map((achievement) => (
-                  <li key={achievement}>{achievement}</li>
-                ))}
-              </ul>
               <div className="tag-list">
-                {item.technologies.map((tech) => (
+                {item.technologies.slice(0, 3).map((tech) => (
                   <span key={tech}>{tech}</span>
                 ))}
               </div>

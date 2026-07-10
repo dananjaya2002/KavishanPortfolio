@@ -1,5 +1,7 @@
 import {
   Activity,
+  ArrowDown,
+  ArrowUp,
   ArrowUpRight,
   Atom,
   AudioLines,
@@ -47,6 +49,8 @@ import {
 
 export const icons = {
   Activity,
+  ArrowDown,
+  ArrowUp,
   ArrowUpRight,
   Atom,
   AudioLines,

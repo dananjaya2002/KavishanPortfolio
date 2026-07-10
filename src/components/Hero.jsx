@@ -10,43 +10,34 @@ function Hero({ profile, onResumeOpen }) {
         <span />
       </div>
       <Reveal className="hero-copy">
-        <p className="eyebrow">Software Developer / Portfolio</p>
+        <p className="availability"><span aria-hidden="true" /> Open to graduate roles and collaborations</p>
         <h1>{profile.name}</h1>
-        <p className="hero-title">{profile.title}</p>
-        <p className="hero-role">{profile.role}</p>
+        <p className="hero-title">{profile.role}</p>
         <p className="hero-summary">{profile.summary}</p>
-        <div className="hero-focus" aria-label="Main focus areas">
-          {profile.focus.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
         <div className="hero-actions">
-          {profile.cta.map((item) => (
-            <a key={item.href} className={`button ${item.variant}`} href={item.href}>
-              <Icon name={item.icon} />
-              {item.label}
-            </a>
-          ))}
+          <a className="button primary" href="#projects">
+            <Icon name="ArrowDown" />
+            View projects
+          </a>
           <button className="button secondary" type="button" onClick={onResumeOpen}>
             <Icon name="FileText" />
-            {profile.resume.label}
+            View resume
           </button>
         </div>
         <div className="social-links hero-socials">
           {profile.socials.map((social) => (
             <a key={social.href} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
-              {social.badge ? (
-                <img className="social-badge" src={social.badge} alt={social.label} loading="lazy" />
-              ) : (
-                <Icon name={social.icon} />
-              )}
+              <Icon name={social.icon} />
             </a>
           ))}
         </div>
       </Reveal>
-      <Reveal className="hero-panel compact glass-card" delay={120}>
-        <span>DK</span>
-        <strong>Clean software, practical systems, focused delivery.</strong>
+      <Reveal className="hero-visual" delay={120} aria-hidden="true">
+        <div className="hero-monogram">DK</div>
+        <div className="hero-visual-copy">
+          <span>Based in Colombo, Sri Lanka</span>
+          <strong>Building useful software across AI, mobile and web.</strong>
+        </div>
       </Reveal>
     </section>
   );

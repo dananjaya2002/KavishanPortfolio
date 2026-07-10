@@ -2,8 +2,8 @@
   "brand": "DK.Dev",
   "name": "Danidu Kavishan",
   "title": "Software Developer",
-  "role": "AI, mobile, web, and systems-focused developer",
-  "summary": "I build practical software with clean interfaces, reliable tooling, and real-world problem solving.",
+  "role": "Software developer building AI-powered mobile and web products.",
+  "summary": "I turn practical ideas into dependable, user-focused software using Python, React, Flutter, and modern cloud tools.",
   "typingText": [
     "Machine Learning Explorer",
     "Data Science Explorer",
@@ -33,28 +33,24 @@
     {
       "label": "GitHub",
       "href": "https://github.com/dananjaya2002",
-      "icon": "Github",
-      "badge": "https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"
+      "icon": "Github"
     },
     {
       "label": "LinkedIn",
       "href": "https://www.linkedin.com/in/danidu-kavishan-a2b31126b/",
-      "icon": "Linkedin",
-      "badge": "https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"
+      "icon": "Linkedin"
     },
     {
       "label": "Email",
       "href": "mailto:kavishandananjaya2002@gmail.com",
-      "icon": "Mail",
-      "badge": "https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white"
+      "icon": "Mail"
     }
   ],
   "nav": [
     { "label": "Home", "href": "#home" },
-    { "label": "About", "href": "#about" },
-    { "label": "Skills", "href": "#skills" },
-    { "label": "Experience", "href": "#experience" },
     { "label": "Projects", "href": "#projects" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "About", "href": "#about" },
     { "label": "Contact", "href": "#contact" }
   ],
   "focus": ["AI", "Mobile", "Web", "Systems"]

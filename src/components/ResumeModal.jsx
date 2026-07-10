@@ -1,23 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Icon } from "../iconMap.jsx";
 
 function ResumeModal({ resume, isOpen, onClose }) {
+  const dialogRef = useRef(null);
+  const closeButtonRef = useRef(null);
+
   useEffect(() => {
     if (!isOpen) {
       return undefined;
     }
 
+    const previouslyFocused = document.activeElement;
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         onClose();
       }
+      if (event.key === "Tab" && dialogRef.current) {
+        const focusable = dialogRef.current.querySelectorAll("a[href], button:not([disabled]), iframe");
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
     };
 
     document.body.classList.add("modal-open");
+    closeButtonRef.current?.focus();
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       document.body.classList.remove("modal-open");
       window.removeEventListener("keydown", handleKeyDown);
+      previouslyFocused?.focus();
     };
   }, [isOpen, onClose]);
 
@@ -28,6 +46,7 @@ function ResumeModal({ resume, isOpen, onClose }) {
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={onClose}>
       <section
+        ref={dialogRef}
         className="resume-modal"
         role="dialog"
         aria-modal="true"
@@ -43,7 +62,7 @@ function ResumeModal({ resume, isOpen, onClose }) {
             <a className="icon-button" href={resume.path} download={resume.downloadName} aria-label="Download resume">
               <Icon name="Download" />
             </a>
-            <button className="icon-button" type="button" onClick={onClose} aria-label="Close resume preview">
+            <button ref={closeButtonRef} className="icon-button" type="button" onClick={onClose} aria-label="Close resume preview">
               <Icon name="X" />
             </button>
           </div>

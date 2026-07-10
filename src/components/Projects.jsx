@@ -5,19 +5,30 @@ import SectionHeader from "./SectionHeader.jsx";
 
 function Projects({ projects }) {
   const [activeFilter, setActiveFilter] = useState("all");
-  const visibleProjects =
+  const [showAll, setShowAll] = useState(false);
+  const orderedProjects = [...projects.items].sort(
+    (a, b) => (a.homepageOrder ?? 99) - (b.homepageOrder ?? 99),
+  );
+  const homepageProjects = orderedProjects.filter((project) => project.homepageOrder).slice(0, 3);
+  const filteredProjects =
     activeFilter === "all"
-      ? projects.items
-      : projects.items.filter((project) => project.filter === activeFilter);
+      ? orderedProjects
+      : orderedProjects.filter((project) => project.filter === activeFilter);
+  const visibleProjects = showAll ? filteredProjects : homepageProjects;
+
+  const toggleAll = () => {
+    setShowAll((current) => !current);
+    setActiveFilter("all");
+  };
 
   return (
     <section id="projects" className="section">
       <SectionHeader
         eyebrow="Selected work"
         title={projects.title}
-        intro="A compact look at projects across AI, mobile applications, IoT ideas, and web systems."
+        intro="Selected products and experiments across applied AI, mobile development and connected systems."
       >
-        <div className="filter-group" aria-label="Project filters">
+        {showAll && <div className="filter-group" aria-label="Project filters">
           {projects.filters.map((filter) => (
             <button
               className={activeFilter === filter.value ? "is-active" : ""}
@@ -28,9 +39,9 @@ function Projects({ projects }) {
               {filter.label}
             </button>
           ))}
-        </div>
+        </div>}
       </SectionHeader>
-      <div className="projects-grid">
+      <div className="projects-grid" id="projects-grid">
         {visibleProjects.map((project, index) => (
           <Reveal
             as="article"
@@ -39,14 +50,14 @@ function Projects({ projects }) {
             key={project.title}
           >
             <div className={`project-preview accent-${project.accent || "green"}`}>
-              {project.image ? <img src={project.image} alt="" loading="lazy" /> : <span>{project.title.slice(0, 2)}</span>}
+              {project.image ? <img src={project.image} alt="" loading="lazy" /> : <span>{project.title.slice(0, 2).toUpperCase()}</span>}
               {project.featured && <strong>Featured</strong>}
             </div>
             <span className="project-category">{project.category}</span>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <div className="tag-list">
-              {project.tags.map((tag) => (
+              {project.tags.slice(0, 3).map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
             </div>
@@ -58,13 +69,24 @@ function Projects({ projects }) {
                   <Icon name="ArrowUpRight" size={16} />
                 </a>
               ))}
-              {!project.links.some((link) => /demo/i.test(link.label)) && (
-                <span className="demo-placeholder">Live demo not added yet</span>
-              )}
             </div>
           </Reveal>
         ))}
       </div>
+      {projects.items.length > 3 && (
+        <div className="projects-toggle-wrap">
+          <button
+            className="button secondary"
+            type="button"
+            aria-expanded={showAll}
+            aria-controls="projects-grid"
+            onClick={toggleAll}
+          >
+            {showAll ? "Show selected projects" : "View all projects"}
+            <Icon name={showAll ? "ArrowUp" : "ArrowDown"} size={18} />
+          </button>
+        </div>
+      )}
     </section>
   );
 }

@@ -34,11 +34,11 @@ function App() {
       />
       <main>
         <Hero profile={profile} onResumeOpen={() => setIsResumeOpen(true)} />
-        <About about={about} />
+        <Projects projects={projects} />
         <Skills skills={skills} />
         <Experience experience={experience} />
-        <Projects projects={projects} />
-        <Contact contact={contact} resume={profile.resume} onResumeOpen={() => setIsResumeOpen(true)} />
+        <About about={about} onResumeOpen={() => setIsResumeOpen(true)} />
+        <Contact contact={contact} />
       </main>
       <Footer profile={profile} />
       <ResumeModal

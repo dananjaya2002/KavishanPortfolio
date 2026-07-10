@@ -1,13 +1,13 @@
 {
   "title": "Experience",
-  "intro": "A timeline of the practical software work, academic development, and project experience shaping my developer journey.",
+  "intro": "Academic and project-based experience behind the products I build.",
   "items": [
     {
       "title": "Computer Science Undergraduate",
       "company": "Academic & Personal Development",
       "dates": "2022 - Present",
       "location": "Sri Lanka",
-      "description": "Building a broad foundation across software engineering, data, mobile applications, and AI-focused systems.",
+      "description": "Developing a practical foundation across software engineering, data, mobile applications, and AI-focused systems.",
       "achievements": [
         "Developed practical projects across AI, mobile, desktop, and web application domains.",
         "Explored machine learning, Docker, cloud platforms, and agile development workflows.",
@@ -20,7 +20,7 @@
       "company": "Project-Based Work",
       "dates": "2023 - Present",
       "location": "Remote / Sri Lanka",
-      "description": "Designing and building mobile applications with Flutter, React Native, Firebase, and user-focused interaction flows.",
+      "description": "Built cross-platform applications with authentication, real-time data, chat, ratings, and service-provider workflows.",
       "achievements": [
         "Built a service advertising application connecting customers and service providers.",
         "Created AGROW, a smart agriculture mobile concept using IoT sensor data and recommendations.",
@@ -33,7 +33,7 @@
       "company": "Independent Projects",
       "dates": "2024 - Present",
       "location": "Colombo, Sri Lanka",
-      "description": "Experimenting with AI-powered assistants, voice interfaces, and web dashboards for real-world information systems.",
+      "description": "Created voice interfaces and information dashboards that make technical systems easier to use.",
       "achievements": [
         "Built a voice control system using OpenAI Whisper, speech recognition, and audio processing.",
         "Contributed to an air-quality monitoring web application with admin and user workflows.",

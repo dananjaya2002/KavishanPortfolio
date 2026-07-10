@@ -1,16 +1,12 @@
 {
   "title": "About Me",
   "paragraphs": [
-    "Hello! I'm Danidu Kavishan, a passionate Computer Science undergraduate with an insatiable curiosity for technology and innovation. My journey in programming began with a simple goal: to harness technology to create meaningful solutions that address real-world challenges.",
-    "I started by mastering web development fundamentals with HTML, CSS, JavaScript, and PHP, which gave me a solid foundation for building dynamic web applications. This led me to explore desktop application development using the .NET framework, where I learned to build robust, user-friendly desktop solutions.",
-    "My passion for accessible technology drove me into mobile app development, where I've gained expertise in Flutter and React Native. I enjoy creating seamless user experiences across different platforms and devices.",
-    "Currently, I'm diving deeper into machine learning, Docker containerization, and AI-powered applications. I'm especially interested in how artificial intelligence can transform everyday interactions and solve complex problems. I also use agile methodologies like Scrum to improve collaboration and project efficiency.",
-    "When I'm not coding, you'll find me exploring the latest tech trends, contributing to open-source projects, or brainstorming innovative solutions with fellow developers. I'm always excited to connect with people who share a passion for technology and innovation."
+    "I'm a Computer Science undergraduate who enjoys taking ideas from early experiments to useful software. My work spans applied AI, cross-platform mobile apps, and full-stack web systems, with a focus on clear interfaces and dependable implementation."
   ],
   "highlights": [
-    { "label": "Focus", "value": "AI, ML, Mobile Apps" },
+    { "label": "Primary Focus", "value": "Applied AI & Product Development" },
     { "label": "Based In", "value": "Colombo, Sri Lanka" },
-    { "label": "Open To", "value": "Projects & Roles" }
+    { "label": "Currently Open To", "value": "Graduate Roles & Collaborations" }
   ],
   "techInterests": [
     "React",

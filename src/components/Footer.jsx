@@ -21,11 +21,7 @@ function Footer({ profile }) {
         <div className="social-links compact">
           {profile.socials.map((social) => (
             <a key={social.href} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
-              {social.badge ? (
-                <img className="social-badge" src={social.badge} alt={social.label} loading="lazy" />
-              ) : (
-                <Icon name={social.icon} />
-              )}
+              <Icon name={social.icon} />
             </a>
           ))}
         </div>
