@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Icon } from "../iconMap.jsx";
 
-function Navbar({ brand, nav, theme, onThemeToggle }) {
+function Navbar({ brand, nav, theme, onThemeToggle, onResumeOpen }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeHref, setActiveHref] = useState(nav[0]?.href || "#home");
+  const [activeHref, setActiveHref] = useState("");
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 16);
@@ -14,7 +14,8 @@ function Navbar({ brand, nav, theme, onThemeToggle }) {
   }, []);
 
   useEffect(() => {
-    const sections = nav.map((item) => document.querySelector(item.href)).filter(Boolean);
+    const sectionHrefs = ["#home", ...nav.map((item) => item.href), "#skills"];
+    const sections = [...new Set(sectionHrefs)].map((href) => document.querySelector(href)).filter(Boolean);
     const observer = new IntersectionObserver(
       (entries) => {
         const visibleEntry = entries
@@ -22,7 +23,8 @@ function Navbar({ brand, nav, theme, onThemeToggle }) {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
         if (visibleEntry) {
-          setActiveHref(`#${visibleEntry.target.id}`);
+          const href = `#${visibleEntry.target.id}`;
+          setActiveHref(nav.some((item) => item.href === href) ? href : "");
         }
       },
       { threshold: [0.25, 0.45, 0.65], rootMargin: "-18% 0px -55% 0px" },
@@ -67,6 +69,9 @@ function Navbar({ brand, nav, theme, onThemeToggle }) {
           onClick={onThemeToggle}
         >
           <Icon name={theme === "dark" ? "Sun" : "Moon"} />
+        </button>
+        <button className="nav-resume" type="button" onClick={() => { onResumeOpen(); setIsOpen(false); }}>
+          Resume
         </button>
       </nav>
     </header>

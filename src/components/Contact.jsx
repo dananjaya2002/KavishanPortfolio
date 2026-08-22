@@ -5,7 +5,7 @@ function Contact({ contact }) {
   const location = contact.details.find((item) => item.label === "Location");
 
   return (
-    <section id="contact" className="section contact-section">
+    <section id="contact" className="section section-toned contact-section">
       <Reveal className="contact-cta">
         <div>
           <p className="eyebrow">Contact</p>

@@ -1,16 +1,11 @@
 import { Icon } from "../iconMap.jsx";
+import CodeEditorCard from "./CodeEditorCard.jsx";
 import Reveal from "./Reveal.jsx";
 
 function Hero({ profile, onResumeOpen }) {
   return (
     <section id="home" className="hero section">
-      <div className="hero-orbits" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </div>
       <Reveal className="hero-copy">
-        <p className="availability"><span aria-hidden="true" /> Open to graduate roles and collaborations</p>
         <h1>{profile.name}</h1>
         <p className="hero-title">{profile.role}</p>
         <p className="hero-summary">{profile.summary}</p>
@@ -32,12 +27,8 @@ function Hero({ profile, onResumeOpen }) {
           ))}
         </div>
       </Reveal>
-      <Reveal className="hero-visual" delay={120} aria-hidden="true">
-        <div className="hero-monogram">DK</div>
-        <div className="hero-visual-copy">
-          <span>Based in Colombo, Sri Lanka</span>
-          <strong>Building useful software across AI, mobile and web.</strong>
-        </div>
+      <Reveal className="hero-editor" delay={120}>
+        <CodeEditorCard />
       </Reveal>
     </section>
   );

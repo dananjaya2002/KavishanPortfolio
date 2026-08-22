@@ -3,7 +3,7 @@
   "name": "Danidu Kavishan",
   "title": "Software Developer",
   "role": "Software developer building AI-powered mobile and web products.",
-  "summary": "I turn practical ideas into dependable, user-focused software using Python, React, Flutter, and modern cloud tools.",
+  "summary": "I build dependable AI, mobile, and web products with Python, React, Flutter, and modern cloud tools.",
   "typingText": [
     "Machine Learning Explorer",
     "Data Science Explorer",
@@ -47,10 +47,9 @@
     }
   ],
   "nav": [
-    { "label": "Home", "href": "#home" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Skills", "href": "#skills" },
     { "label": "About", "href": "#about" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Experience", "href": "#experience" },
     { "label": "Contact", "href": "#contact" }
   ],
   "focus": ["AI", "Mobile", "Web", "Systems"]

@@ -31,13 +31,14 @@ function App() {
         nav={profile.nav}
         theme={theme}
         onThemeToggle={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onResumeOpen={() => setIsResumeOpen(true)}
       />
       <main>
         <Hero profile={profile} onResumeOpen={() => setIsResumeOpen(true)} />
-        <Projects projects={projects} />
-        <Skills skills={skills} />
-        <Experience experience={experience} />
         <About about={about} onResumeOpen={() => setIsResumeOpen(true)} />
+        <Projects projects={projects} />
+        <Experience experience={experience} />
+        <Skills skills={skills} />
         <Contact contact={contact} />
       </main>
       <Footer profile={profile} />

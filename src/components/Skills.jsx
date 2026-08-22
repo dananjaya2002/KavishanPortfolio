@@ -3,13 +3,6 @@ import Reveal from "./Reveal.jsx";
 import SectionHeader from "./SectionHeader.jsx";
 
 function Skills({ skills }) {
-  const visibleCategories = skills.categories
-    .map((category) => ({
-      ...category,
-      skills: category.skills.filter((skill) => skill.featured),
-    }))
-    .filter((category) => category.skills.length > 0);
-
   return (
     <section id="skills" className="section">
       <SectionHeader
@@ -18,7 +11,7 @@ function Skills({ skills }) {
         intro={skills.intro}
       />
       <div className="skills-groups">
-        {visibleCategories.map((category, categoryIndex) => (
+        {skills.categories.map((category, categoryIndex) => (
           <Reveal
             as="article"
             className="skill-group"
