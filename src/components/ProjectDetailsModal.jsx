@@ -165,25 +165,34 @@ function ProjectDetailsModal({ project, previousProject, nextProject, shareUrl, 
                   <ul className="project-highlights">{details.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
                 </section>
               )}
-              {architecture?.flows?.length > 0 && (
+              {(architecture?.image || architecture?.flows?.length > 0) && (
                 <section className="project-detail-section">
                   <h3>System architecture</h3>
-                  <div className="architecture-diagram">
-                    {architecture.flows.map((flow) => (
-                      <div className="architecture-flow" key={flow.label}>
-                        <strong>{flow.label}</strong>
-                        <div className="architecture-steps">
-                          {flow.steps.map((step, index) => (
-                            <div className="architecture-step-wrap" key={step}>
-                              <span className="architecture-step">{step}</span>
-                              {index < flow.steps.length - 1 && <span className="architecture-arrow" aria-hidden="true">→</span>}
-                            </div>
-                          ))}
+                  {architecture.image ? (
+                    <figure className="architecture-image">
+                      <a href={architecture.image} target="_blank" rel="noreferrer" aria-label="Open the full-size architecture diagram">
+                        <img src={architecture.image} alt={architecture.alt || `${project.title} architecture diagram`} loading="lazy" />
+                      </a>
+                      {architecture.deployment && <figcaption><Icon name="Container" size={18} /> {architecture.deployment}</figcaption>}
+                    </figure>
+                  ) : (
+                    <div className="architecture-diagram">
+                      {architecture.flows.map((flow) => (
+                        <div className="architecture-flow" key={flow.label}>
+                          <strong>{flow.label}</strong>
+                          <div className="architecture-steps">
+                            {flow.steps.map((step, index) => (
+                              <div className="architecture-step-wrap" key={step}>
+                                <span className="architecture-step">{step}</span>
+                                {index < flow.steps.length - 1 && <span className="architecture-arrow" aria-hidden="true">→</span>}
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                    {architecture.deployment && <p className="architecture-deployment"><Icon name="Container" size={18} /> {architecture.deployment}</p>}
-                  </div>
+                      ))}
+                      {architecture.deployment && <p className="architecture-deployment"><Icon name="Container" size={18} /> {architecture.deployment}</p>}
+                    </div>
+                  )}
                 </section>
               )}
               {gallery.length > 0 && (

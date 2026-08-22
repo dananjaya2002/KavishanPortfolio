@@ -77,17 +77,9 @@
           "Portable Linux and OpenShift deployment with Podman"
         ],
         "architecture": {
-          "flows": [
-            {
-              "label": "Query flow",
-              "steps": ["Open WebUI / React", "FastAPI security layer", "Qdrant retrieval", "llama.cpp inference"]
-            },
-            {
-              "label": "Knowledge flow",
-              "steps": ["Private documents and repositories", "Ingestion API", "Qdrant"]
-            }
-          ],
-          "deployment": "Podman containers deployed on Linux or OpenShift"
+          "image": "/images/AI_VM_Stack_Architecture.png",
+          "alt": "Architecture diagram of the AI Stack VM private local RAG system",
+          "deployment": "Podman/docker containers can be deployed"
         },
         "gallery": []
       }
