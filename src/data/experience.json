@@ -1,45 +1,32 @@
 {
-  "title": "Experience",
-  "intro": "Academic and project-based experience behind the products I build.",
+  "title": "Work Experience",
+  "intro": "Professional software engineering experience delivering and maintaining digital systems for Sri Lanka's Department of Agrarian Development.",
   "items": [
     {
-      "title": "Computer Science Undergraduate",
-      "company": "Academic & Personal Development",
-      "dates": "2022 - Present",
-      "location": "Sri Lanka",
-      "description": "Developing a practical foundation across software engineering, data, mobile applications, and AI-focused systems.",
-      "achievements": [
-        "Developed practical projects across AI, mobile, desktop, and web application domains.",
-        "Explored machine learning, Docker, cloud platforms, and agile development workflows.",
-        "Strengthened full-stack fundamentals through academic and independent project work."
-      ],
-      "technologies": ["Python", "React", "Flutter", "Firebase", "SQL", "Docker"]
-    },
-    {
-      "title": "Mobile Application Developer",
-      "company": "Project-Based Work",
-      "dates": "2023 - Present",
-      "location": "Remote / Sri Lanka",
-      "description": "Built cross-platform applications with authentication, real-time data, chat, ratings, and service-provider workflows.",
-      "achievements": [
-        "Built a service advertising application connecting customers and service providers.",
-        "Created AGROW, a smart agriculture mobile concept using IoT sensor data and recommendations.",
-        "Implemented authentication, data storage, chat, bookmarking, ratings, and provider workflows."
-      ],
-      "technologies": ["Flutter", "Dart", "React Native", "Firebase", "NoSQL"]
-    },
-    {
-      "title": "AI & Web Systems Builder",
-      "company": "Independent Projects",
-      "dates": "2024 - Present",
+      "title": "Software Engineer",
+      "employmentType": "Contract",
+      "company": "Department of Agrarian Development",
+      "dates": "Apr 2026 \u2013 Present",
       "location": "Colombo, Sri Lanka",
-      "description": "Created voice interfaces and information dashboards that make technical systems easier to use.",
+      "description": "Design, develop, and maintain software applications supporting the Department's operational and digital-service requirements while continuing to enhance existing departmental systems.",
       "achievements": [
-        "Built a voice control system using OpenAI Whisper, speech recognition, and audio processing.",
-        "Contributed to an air-quality monitoring web application with admin and user workflows.",
-        "Focused on making technical systems easier to interact with through practical interfaces."
+        "Independently developed and currently maintain DAD TV, an internal broadcasting and media-management platform used by the Department.",
+        "Maintain and expand the FarmerNet web platform, including the ongoing development of its next version."
       ],
-      "technologies": ["Python", "OpenAI Whisper", "ASP.NET Core", "SQL Server", "Razor Pages"]
+      "technologies": ["React", "TypeScript", "Node.js", "PHP", "MySQL", "Linux", "OpenShift", "Docker", "Podman"]
+    },
+    {
+      "title": "Software Engineer",
+      "employmentType": "Intern",
+      "company": "Department of Agrarian Development",
+      "dates": "Oct 2025 \u2013 Apr 2026",
+      "location": "Colombo, Sri Lanka",
+      "description": "Contributed to the design and fully developed Version 1 modules of the FarmerNet Web Platform.",
+      "achievements": [
+        "Delivered farmer registration and authentication, profile management, land registration, cultivation management, damage reporting, harvesting records, and officer-side data management.",
+        "Conducted application and database testing and optimization while supporting deployment and server administration using Linux, Red Hat OpenShift, Docker, Podman, Nginx, SSH, Git, and GitHub."
+      ],
+      "technologies": ["PHP", "MySQL", "Linux", "OpenShift", "Docker", "Podman", "Nginx", "Git"]
     }
   ]
 }

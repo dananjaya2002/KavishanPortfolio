@@ -17,11 +17,23 @@ function Experience({ experience }) {
                 <span>{item.dates}</span>
                 <span>{item.location}</span>
               </div>
-              <h3>{item.title}</h3>
+              <h3>
+                <span className="experience-role">{item.title}</span>
+                {item.employmentType && <span className="employment-type"> · {item.employmentType}</span>}
+              </h3>
               <p className="timeline-company">{item.company}</p>
-              <p>{item.description}</p>
+              <div className="timeline-description">
+                <p>{item.description}</p>
+                {item.achievements?.length > 0 && (
+                  <ul>
+                    {item.achievements.map((achievement) => (
+                      <li key={achievement}>{achievement}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
               <div className="tag-list">
-                {item.technologies.slice(0, 3).map((tech) => (
+                {item.technologies.slice(0, 5).map((tech) => (
                   <span key={tech}>{tech}</span>
                 ))}
               </div>
