@@ -471,10 +471,11 @@ h3 { line-height: 1.25; letter-spacing: -0.02em; }
 .timeline-marker { z-index: 1; display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--bg-soft); color: var(--primary); }
 .timeline-card { display: grid; grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr); column-gap: 30px; border-bottom: 1px solid var(--line); padding: 6px 0 26px; }
 .timeline-topline { grid-column: 1; display: flex; flex-direction: column; gap: 3px; color: var(--muted); font-size: 0.84rem; line-height: 1.45; }
-.timeline-card h3 { grid-column: 1; margin: 36px 0 7px; font-size: clamp(1.3rem, 2.2vw, 1.55rem); line-height: 1.25; }
+.timeline-position { grid-column: 1; margin-top: 36px; }
+.timeline-card h3 { margin: 0 0 3px; font-size: clamp(1.3rem, 2.2vw, 1.55rem); line-height: 1.25; }
 .experience-role { color: var(--text); font-weight: 780; }
 .employment-type { color: var(--muted); font-size: 0.76em; font-weight: 560; white-space: nowrap; }
-.timeline-company { grid-column: 1; margin: 0; color: var(--primary) !important; font-size: 0.84rem; font-weight: 650; line-height: 1.45 !important; }
+.timeline-company { margin: 0; color: var(--primary) !important; font-size: 0.84rem; font-weight: 650; line-height: 1.45 !important; }
 .timeline-description { grid-column: 2; grid-row: 1 / span 3; color: var(--muted); line-height: 1.65; }
 .timeline-description > p { margin: 0; }
 .timeline-description ul { display: grid; gap: 8px; margin: 14px 0 0; padding-left: 19px; }
@@ -675,7 +676,7 @@ h3 { line-height: 1.25; letter-spacing: -0.02em; }
   .timeline-marker { width: 30px; height: 30px; }
   .timeline::before { left: 15px; }
   .timeline-card { grid-template-columns: 1fr; padding-top: 0; }
-  .timeline-topline, .timeline-card h3, .timeline-company, .timeline-description, .timeline-card .tag-list { grid-column: 1; grid-row: auto; }
+  .timeline-topline, .timeline-position, .timeline-description, .timeline-card .tag-list { grid-column: 1; grid-row: auto; }
   .timeline-description { margin-top: 12px; }
   .contact-section { padding-block: 74px; }
   .contact-actions, .contact-actions .button { width: 100%; }
