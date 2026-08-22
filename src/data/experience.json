@@ -1,0 +1,32 @@
+{
+  "title": "Work Experience",
+  "intro": "Professional software engineering experience delivering and maintaining digital systems for Sri Lanka's Department of Agrarian Development.",
+  "items": [
+    {
+      "title": "Software Engineer",
+      "employmentType": "Contract",
+      "company": "Department of Agrarian Development",
+      "dates": "Apr 2026 \u2013 Present",
+      "location": "Colombo, Sri Lanka",
+      "description": "Design, develop, and maintain software applications supporting the Department's operational and digital-service requirements while continuing to enhance existing departmental systems.",
+      "achievements": [
+        "Independently developed and currently maintain DAD TV, an internal broadcasting and media-management platform used by the Department.",
+        "Maintain and expand the FarmerNet web platform, including the ongoing development of its next version."
+      ],
+      "technologies": ["React", "TypeScript", "Node.js", "PHP", "MySQL", "Linux", "OpenShift", "Docker", "Podman"]
+    },
+    {
+      "title": "Software Engineer",
+      "employmentType": "Intern",
+      "company": "Department of Agrarian Development",
+      "dates": "Oct 2025 \u2013 Apr 2026",
+      "location": "Colombo, Sri Lanka",
+      "description": "Contributed to the design and fully developed Version 1 modules of the FarmerNet Web Platform.",
+      "achievements": [
+        "Delivered farmer registration and authentication, profile management, land registration, cultivation management, damage reporting, harvesting records, and officer-side data management.",
+        "Conducted application and database testing and optimization while supporting deployment and server administration using Linux, Red Hat OpenShift, Docker, Podman, Nginx, SSH, Git, and GitHub."
+      ],
+      "technologies": ["PHP", "MySQL", "Linux", "OpenShift", "Docker", "Podman", "Nginx", "Git"]
+    }
+  ]
+}

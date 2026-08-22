@@ -1,0 +1,96 @@
+{
+  "title": "Technical Skills",
+  "intro": "Languages, frameworks, platforms, and infrastructure I use to build secure, production-ready software.",
+  "categories": [
+    {
+      "title": "Programming Languages",
+      "icon": "Code2",
+      "skills": [
+        { "name": "JavaScript", "icon": "Braces" },
+        { "name": "TypeScript", "icon": "FileCode2" },
+        { "name": "PHP", "icon": "Code2" },
+        { "name": "Python", "icon": "Terminal" },
+        { "name": "SQL", "icon": "Database" },
+        { "name": "Dart", "icon": "Smartphone" }
+      ]
+    },
+    {
+      "title": "Front-End & Mobile",
+      "icon": "Smartphone",
+      "skills": [
+        { "name": "React", "icon": "Atom" },
+        { "name": "HTML", "icon": "Layout" },
+        { "name": "CSS", "icon": "Braces" },
+        { "name": "Flutter", "icon": "Smartphone" },
+        { "name": "React Native", "icon": "MonitorSmartphone" }
+      ]
+    },
+    {
+      "title": "Back-End Development",
+      "icon": "Server",
+      "skills": [
+        { "name": "Node.js", "icon": "Server" },
+        { "name": "Express.js", "icon": "Workflow" },
+        { "name": "FastAPI", "icon": "Activity" },
+        { "name": "PHP", "icon": "Code2" },
+        { "name": "REST APIs", "icon": "Network" }
+      ]
+    },
+    {
+      "title": "Databases",
+      "icon": "Database",
+      "skills": [
+        { "name": "MySQL", "icon": "Database" },
+        { "name": "SQLite", "icon": "Table2" },
+        { "name": "Firebase", "icon": "Flame" },
+        { "name": "Qdrant", "icon": "HardDrive" }
+      ]
+    },
+    {
+      "title": "AI & Machine Learning",
+      "icon": "Brain",
+      "skills": [
+        { "name": "Retrieval-Augmented Generation (RAG)", "icon": "Brain" },
+        { "name": "Local LLM Deployment", "icon": "Server" },
+        { "name": "llama.cpp", "icon": "Code2" },
+        { "name": "Open WebUI", "icon": "Globe" },
+        { "name": "TensorFlow Lite", "icon": "Activity" }
+      ]
+    },
+    {
+      "title": "Authentication & Security",
+      "icon": "Hash",
+      "skills": [
+        { "name": "Session-Based Authentication", "icon": "Hash" },
+        { "name": "Role-Based Access Control", "icon": "Network" },
+        { "name": "Permission-Based Access Control", "icon": "Network" },
+        { "name": "API Authentication", "icon": "Workflow" },
+        { "name": "Rate Limiting", "icon": "Activity" }
+      ]
+    },
+    {
+      "title": "DevOps & Infrastructure",
+      "icon": "Container",
+      "skills": [
+        { "name": "Docker", "icon": "Container" },
+        { "name": "Docker Compose", "icon": "Boxes" },
+        { "name": "Podman", "icon": "Container" },
+        { "name": "Red Hat OpenShift", "icon": "Cloud" },
+        { "name": "OpenShift Virtualization", "icon": "Cloud" },
+        { "name": "Virtual Machines (VMs)", "icon": "MonitorSmartphone" },
+        { "name": "Linux", "icon": "Terminal" },
+        { "name": "Nginx", "icon": "Server" },
+        { "name": "SSH", "icon": "Terminal" }
+      ]
+    },
+    {
+      "title": "Tools & Platforms",
+      "icon": "Boxes",
+      "skills": [
+        { "name": "Git", "icon": "Workflow" },
+        { "name": "GitHub", "icon": "Github" },
+        { "name": "phpMyAdmin", "icon": "Database" }
+      ]
+    }
+  ]
+}

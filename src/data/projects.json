@@ -1,0 +1,253 @@
+{
+  "title": "Featured Projects",
+  "filters": [
+    { "label": "All Projects", "value": "all" },
+    { "label": "AI & Machine Learning", "value": "ai-ml" },
+    { "label": "Mobile Applications", "value": "mobile" },
+    { "label": "Web Applications", "value": "web" }
+  ],
+  "items": [
+    {
+      "slug": "dad-tv-streaming",
+      "title": "DAD TV Video Streaming Solution",
+      "category": "Full-Stack Development",
+      "filter": "web",
+      "featured": true,
+      "homepageOrder": 1,
+      "previewLabel": "DT",
+      "role": "Full-Stack Developer",
+      "primaryTags": ["React", "TypeScript", "Node.js", "FFmpeg", "HLS"],
+      "image": "/images/dad_tv_streaming.png",
+      "accent": "red",
+      "description": "A full-stack broadcasting and media-management platform developed for the Department of Agrarian Development, combining video uploads, live channel operations, multilingual news tickers, adaptive HLS delivery, stream monitoring, and automatic recovery.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "SQLite",
+        "FFmpeg",
+        "FFprobe",
+        "HLS",
+        "Docker Compose",
+        "Nginx",
+        "Linux"
+      ],
+      "links": [
+        {
+          "label": "Live Project",
+          "href": "https://tv.agrarian.lk/",
+          "icon": "ExternalLink"
+        }
+      ]
+    },
+    {
+      "slug": "ai-stack-vm",
+      "title": "AI Stack VM - Private Local RAG System",
+      "category": "AI & Machine Learning",
+      "filter": "ai-ml",
+      "featured": true,
+      "homepageOrder": 2,
+      "previewLabel": "AS",
+      "image": "/images/AI_VM_Stack.png",
+      "video": "/videos/AI_VM_Stack_Demo.mp4",
+      "role": "AI Platform Developer",
+      "primaryTags": ["Python", "FastAPI", "Qdrant", "React", "llama.cpp"],
+      "accent": "cyan",
+      "description": "A self-hosted AI platform for running local large language models and retrieval-augmented generation over private engineering documents and source-code repositories, with authentication, rate limiting, and flexible Linux or OpenShift deployment.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "Qdrant",
+        "React",
+        "TypeScript",
+        "llama.cpp",
+        "Open WebUI",
+        "Podman",
+        "Linux",
+        "OpenShift"
+      ],
+      "links": [],
+      "details": {
+        "overview": "A private, self-hosted AI platform designed to run local language models and retrieval-augmented generation over sensitive engineering documents and source-code repositories without sending data to external AI services.",
+        "highlights": [
+          "Private local inference with llama.cpp",
+          "Retrieval across engineering documents and source repositories",
+          "Authentication and rate-limited FastAPI services",
+          "Portable Linux and OpenShift deployment with Podman"
+        ],
+        "architecture": {
+          "flows": [
+            {
+              "label": "Query flow",
+              "steps": ["Open WebUI / React", "FastAPI security layer", "Qdrant retrieval", "llama.cpp inference"]
+            },
+            {
+              "label": "Knowledge flow",
+              "steps": ["Private documents and repositories", "Ingestion API", "Qdrant"]
+            }
+          ],
+          "deployment": "Podman containers deployed on Linux or OpenShift"
+        },
+        "gallery": []
+      }
+    },
+    {
+      "slug": "real-time-voice-control",
+      "title": "Real-Time Voice Control System",
+      "category": "AI & Machine Learning",
+      "filter": "ai-ml",
+      "featured": false,
+      "homepageOrder": 6,
+      "image": "",
+      "accent": "green",
+      "description": "A modern AI-powered voice control system that lets users control a computer, browser, and media players using natural voice commands, powered by OpenAI Whisper and Silero VAD.",
+      "tags": [
+        "Python",
+        "Speech Recognition",
+        "Audio Processing",
+        "Speech-to-Text"
+      ],
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/dananjaya2002/realtime-voice-assistant",
+          "icon": "Github"
+        }
+      ]
+    },
+    {
+      "slug": "service-advertising-app",
+      "title": "Service Advertising Mobile App",
+      "category": "Mobile Applications",
+      "filter": "mobile",
+      "featured": false,
+      "homepageOrder": 8,
+      "image": "",
+      "accent": "blue",
+      "description": "A Flutter mobile application with Firebase backend that connects customers with service providers. Customers can find, view, bookmark, chat with, and rate service providers.",
+      "tags": ["Flutter", "Dart", "Firebase", "NoSQL"],
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/dananjaya2002/flutter_service_advertising_app",
+          "icon": "Github"
+        }
+      ]
+    },
+    {
+      "slug": "agrow-smart-agriculture",
+      "title": "AGROW - Smart Agriculture IoT Solution",
+      "category": "Mobile Applications",
+      "filter": "mobile",
+      "featured": false,
+      "homepageOrder": 7,
+      "image": "",
+      "accent": "lime",
+      "description": "AGROW bridges modern technology with agriculture, enabling farmers to monitor soil conditions in real time and receive intelligent fertilizer recommendations through IoT sensors.",
+      "tags": ["Flutter", "Dart", "Firebase", "IoT"],
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/dananjaya2002/agrow-iot-app",
+          "icon": "Github"
+        }
+      ]
+    },
+    {
+      "slug": "pomescan",
+      "title": "PomeScan - Offline Pomegranate Quality Monitoring",
+      "category": "AI & Machine Learning",
+      "filter": "ai-ml",
+      "featured": true,
+      "homepageOrder": 3,
+      "image": "/images/pomescan.png",
+      "role": "Mobile and Machine Learning Developer",
+      "primaryTags": ["Flutter", "Dart", "TensorFlow Lite", "YOLO", "Edge AI"],
+      "accent": "green",
+      "description": "An offline Edge AI system for detecting pomegranate ripeness and classifying common fruit diseases directly on a smartphone. The project combines a Flutter mobile application, YOLO-based computer vision models, TensorFlow Lite deployment, and a custom desktop suite for image preprocessing, dataset annotation, model training, validation, and benchmarking.",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "TensorFlow Lite",
+        "Computer Vision",
+        "Mobile AI",
+        "YOLO",
+        "Edge AI",
+        "Python"
+      ],
+      "links": [
+        {
+          "label": "Mobile App Code",
+          "href": "https://github.com/dananjaya2002/pomscan-pomogranate-detection-application",
+          "icon": "Github"
+        },
+        {
+          "label": "Model Pipeline Code",
+          "href": "https://github.com/dananjaya2002/pomegranate_project_model-process",
+          "icon": "Github"
+        },
+        {
+          "label": "Android Release",
+          "href": "https://github.com/dananjaya2002/pomscan-pomogranate-detection-application/releases/tag/v1.0.0",
+          "icon": "Download"
+        }
+      ]
+    },
+    {
+      "slug": "mail-management-system",
+      "title": "Mail Management System",
+      "category": "Full-Stack Development",
+      "filter": "web",
+      "featured": false,
+      "homepageOrder": 4,
+      "previewLabel": "MM",
+      "image": "",
+      "accent": "blue",
+      "description": "A secure document-routing and approval platform for creating, distributing, tracking, and processing official correspondence across departments, with granular permissions, audit trails, PDF handling, dashboards, and search.",
+      "tags": ["PHP", "MySQL", "Docker", "Podman"],
+      "links": []
+    },
+    {
+      "slug": "farmernet",
+      "title": "FarmerNet Web Platform",
+      "category": "Full-Stack Development",
+      "filter": "web",
+      "featured": false,
+      "homepageOrder": 5,
+      "previewLabel": "FW",
+      "image": "",
+      "accent": "lime",
+      "description": "An agricultural information-management platform supporting farmer registration, land and cultivation records, damage reporting, harvesting records, and officer-side administrative workflows for the Department of Agrarian Development.",
+      "tags": [
+        "PHP",
+        "MySQL",
+        "OpenShift",
+        "HTML",
+        "CSS",
+        "Linux",
+        "Docker"
+      ],
+      "links": []
+    },
+    {
+      "slug": "air-quality-monitoring",
+      "title": "Air Quality Display and Management Web Application",
+      "category": "Web Applications",
+      "filter": "web",
+      "featured": false,
+      "homepageOrder": 9,
+      "image": "",
+      "accent": "cyan",
+      "description": "An interactive web application for real-time air quality monitoring in Colombo. Users can view detailed air quality information while administrators manage sensor data and user access.",
+      "tags": ["ASP.NET Core MVC", "EF Core", "SQL Server", "Razor Pages"],
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/Mithila001/Air_Quality_Monitoring_Website",
+          "icon": "Github"
+        }
+      ]
+    }
+  ]
+}

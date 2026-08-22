@@ -1,0 +1,56 @@
+{
+  "brand": "DK.Dev",
+  "name": "Danidu Kavishan",
+  "title": "Software Developer",
+  "role": "Software developer building AI-powered mobile and web products.",
+  "summary": "I build dependable AI, mobile, and web products with Python, React, Flutter, and modern cloud tools.",
+  "typingText": [
+    "Machine Learning Explorer",
+    "Data Science Explorer",
+    "AI Research Enthusiast",
+    "Desktop & Mobile Application Developer"
+  ],
+  "resume": {
+    "label": "My Resume",
+    "path": "/documents/Danidu_Kavishan_CV.pdf",
+    "downloadName": "Danidu_Kavishan_CV.pdf"
+  },
+  "cta": [
+    {
+      "label": "View Projects",
+      "href": "#projects",
+      "variant": "primary",
+      "icon": "Rocket"
+    },
+    {
+      "label": "Contact Me",
+      "href": "#contact",
+      "variant": "secondary",
+      "icon": "Mail"
+    }
+  ],
+  "socials": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/dananjaya2002",
+      "icon": "Github"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/danidu-kavishan-a2b31126b/",
+      "icon": "Linkedin"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:kavishandananjaya2002@gmail.com",
+      "icon": "Mail"
+    }
+  ],
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "focus": ["AI", "Mobile", "Web", "Systems"]
+}

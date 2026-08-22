@@ -1,0 +1,25 @@
+{
+  "title": "About Me",
+  "paragraphs": [
+    "I'm a Computer Science undergraduate who enjoys taking ideas from early experiments to useful software. My work spans applied AI, cross-platform mobile apps, and full-stack web systems, with a focus on clear interfaces and dependable implementation."
+  ],
+  "highlights": [
+    { "label": "Primary Focus", "value": "Applied AI & Product Development" },
+    { "label": "Based In", "value": "Colombo, Sri Lanka" },
+    { "label": "Currently Open To", "value": "Graduate Roles & Collaborations" }
+  ],
+  "techInterests": [
+    "React",
+    "Flutter",
+    "Python",
+    "Machine Learning",
+    "Firebase",
+    "Docker",
+    "Cloud Platforms"
+  ],
+  "facts": [
+    "I enjoy turning rough product ideas into usable software.",
+    "I like working across the full stack, from UI to backend logic.",
+    "I am especially interested in AI-powered everyday tools."
+  ]
+}
