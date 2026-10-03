@@ -200,7 +200,16 @@ function ProjectDetailsModal({ project, previousProject, nextProject, shareUrl, 
               {gallery.length > 0 && (
                 <section className="project-detail-section">
                   <h3>Gallery</h3>
-                  <div className="project-gallery">{gallery.map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} loading="lazy" />{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div>
+                  <div className="project-gallery">
+                    {gallery.map((image) => (
+                      <figure key={image.src}>
+                        <a href={image.src} target="_blank" rel="noreferrer" aria-label={`Open full-size screenshot: ${image.alt || project.title}`}>
+                          <img src={image.src} alt={image.alt} loading="lazy" />
+                        </a>
+                        {image.caption && <figcaption>{image.caption}</figcaption>}
+                      </figure>
+                    ))}
+                  </div>
                 </section>
               )}
             </div>
