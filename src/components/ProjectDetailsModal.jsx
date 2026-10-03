@@ -169,12 +169,14 @@ function ProjectDetailsModal({ project, previousProject, nextProject, shareUrl, 
                 <section className="project-detail-section">
                   <h3>System architecture</h3>
                   {architecture.image ? (
-                    <figure className="architecture-image">
-                      <a href={architecture.image} target="_blank" rel="noreferrer" aria-label="Open the full-size architecture diagram">
-                        <img src={architecture.image} alt={architecture.alt || `${project.title} architecture diagram`} loading="lazy" />
-                      </a>
-                      {architecture.deployment && <figcaption><Icon name="Container" size={18} /> {architecture.deployment}</figcaption>}
-                    </figure>
+                    [architecture, ...(architecture.diagrams || [])].map((diagram) => (
+                      <figure className="architecture-image" key={diagram.image}>
+                        <a href={diagram.image} target="_blank" rel="noreferrer" aria-label={`Open full-size diagram: ${diagram.alt || project.title}`}>
+                          <img src={diagram.image} alt={diagram.alt || `${project.title} architecture diagram`} loading="lazy" />
+                        </a>
+                        {diagram.deployment && <figcaption><Icon name="Container" size={18} /> {diagram.deployment}</figcaption>}
+                      </figure>
+                    ))
                   ) : (
                     <div className="architecture-diagram">
                       {architecture.flows.map((flow) => (

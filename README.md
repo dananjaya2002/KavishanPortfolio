@@ -81,7 +81,7 @@ Most content can be changed in `src/data/`:
 | `about.json` | Biography, highlights, and interests |
 | `contact.json` | Contact details and social profiles |
 
-Place project media in `src/assets/` and public files such as a résumé in `public/`. When adding an icon name to a data file, ensure it is also exported through `src/iconMap.jsx`.
+Place project images in `public/images/projects/<project-slug>/`, using descriptive filenames such as `cover.png`, `architecture.png`, or `controlled-release.png`. Reference them in project data as `/images/projects/<project-slug>/<filename>`. Keep videos in `public/videos/` and documents such as a résumé in `public/documents/`. When adding an icon name to a data file, ensure it is also exported through `src/iconMap.jsx`.
 
 ## Production build
 

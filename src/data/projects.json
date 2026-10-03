@@ -3,21 +3,25 @@
   "filters": [
     { "label": "All Projects", "value": "all" },
     { "label": "AI & Machine Learning", "value": "ai-ml" },
-    { "label": "Mobile Applications", "value": "mobile" },
-    { "label": "Web Applications", "value": "web" }
+    { "label": "Media & Streaming", "value": "media" },
+    { "label": "Platform & DevOps", "value": "platform" },
+    { "label": "Enterprise Workflows", "value": "enterprise" },
+    { "label": "Mobile & Marketplaces", "value": "mobile" },
+    { "label": "IoT & Smart Agriculture", "value": "iot" },
+    { "label": "Monitoring & Visualization", "value": "monitoring" }
   ],
   "items": [
     {
       "slug": "dad-tv-streaming",
       "title": "DAD TV Video Streaming Solution",
-      "category": "Full-Stack Development",
-      "filter": "web",
+      "category": "Media / Streaming / Full-Stack",
+      "filters": ["media"],
       "featured": true,
       "homepageOrder": 1,
       "previewLabel": "DT",
       "role": "Full-Stack Developer",
       "primaryTags": ["React", "TypeScript", "Node.js", "FFmpeg", "HLS"],
-      "image": "/images/dad_tv_streaming.png",
+      "image": "/images/projects/dad-tv-streaming/cover.png",
       "accent": "red",
       "description": "A full-stack broadcasting and media-management platform developed for the Department of Agrarian Development, combining video uploads, live channel operations, multilingual news tickers, adaptive HLS delivery, stream monitoring, and automatic recovery.",
       "tags": [
@@ -44,12 +48,12 @@
     {
       "slug": "ai-stack-vm",
       "title": "AI Stack VM - Private Local RAG System",
-      "category": "AI & Machine Learning",
-      "filter": "ai-ml",
+      "category": "AI / RAG / Platform Engineering",
+      "filters": ["ai-ml", "platform"],
       "featured": true,
       "homepageOrder": 2,
       "previewLabel": "AS",
-      "image": "/images/AI_VM_Stack.png",
+      "image": "/images/projects/ai-stack-vm/cover.png",
       "video": "/videos/AI_VM_Stack_Demo.mp4",
       "role": "AI Platform Developer",
       "primaryTags": ["Python", "FastAPI", "Qdrant", "React", "llama.cpp"],
@@ -77,7 +81,7 @@
           "Portable Linux and OpenShift deployment with Podman"
         ],
         "architecture": {
-          "image": "/images/AI_VM_Stack_Architecture.png",
+          "image": "/images/projects/ai-stack-vm/architecture.png",
           "alt": "Architecture diagram of the AI Stack VM private local RAG system",
           "deployment": "Podman/docker containers can be deployed"
         },
@@ -87,10 +91,10 @@
     {
       "slug": "real-time-voice-control",
       "title": "Real-Time Voice Control System",
-      "category": "AI & Machine Learning",
-      "filter": "ai-ml",
+      "category": "AI / Speech Recognition / Automation",
+      "filters": ["ai-ml"],
       "featured": false,
-      "homepageOrder": 6,
+      "homepageOrder": 7,
       "image": "",
       "accent": "green",
       "description": "A modern AI-powered voice control system that lets users control a computer, browser, and media players using natural voice commands, powered by OpenAI Whisper and Silero VAD.",
@@ -111,10 +115,10 @@
     {
       "slug": "service-advertising-app",
       "title": "Service Advertising Mobile App",
-      "category": "Mobile Applications",
-      "filter": "mobile",
+      "category": "Mobile / Marketplace / Real-Time Messaging",
+      "filters": ["mobile"],
       "featured": false,
-      "homepageOrder": 8,
+      "homepageOrder": 9,
       "image": "",
       "accent": "blue",
       "description": "A Flutter mobile application with Firebase backend that connects customers with service providers. Customers can find, view, bookmark, chat with, and rate service providers.",
@@ -130,10 +134,10 @@
     {
       "slug": "agrow-smart-agriculture",
       "title": "AGROW - Smart Agriculture IoT Solution",
-      "category": "Mobile Applications",
-      "filter": "mobile",
+      "category": "IoT / Smart Agriculture / Mobile",
+      "filters": ["iot", "mobile"],
       "featured": false,
-      "homepageOrder": 7,
+      "homepageOrder": 8,
       "image": "",
       "accent": "lime",
       "description": "AGROW bridges modern technology with agriculture, enabling farmers to monitor soil conditions in real time and receive intelligent fertilizer recommendations through IoT sensors.",
@@ -149,11 +153,11 @@
     {
       "slug": "pomescan",
       "title": "PomeScan - Offline Pomegranate Quality Monitoring",
-      "category": "AI & Machine Learning",
-      "filter": "ai-ml",
+      "category": "ML / Computer Vision / Mobile",
+      "filters": ["ai-ml", "mobile"],
       "featured": true,
-      "homepageOrder": 3,
-      "image": "/images/pomescan.png",
+      "homepageOrder": 4,
+      "image": "/images/projects/pomescan/cover.png",
       "role": "Mobile and Machine Learning Developer",
       "primaryTags": ["Flutter", "Dart", "TensorFlow Lite", "YOLO", "Edge AI"],
       "accent": "green",
@@ -189,22 +193,49 @@
     {
       "slug": "mail-management-system",
       "title": "Mail Management System",
-      "category": "Full-Stack Development",
-      "filter": "web",
-      "featured": false,
-      "homepageOrder": 4,
+      "category": "Enterprise Workflows / Security / OpenShift / DevOps",
+      "filters": ["enterprise", "platform"],
+      "featured": true,
+      "homepageOrder": 3,
       "previewLabel": "MM",
-      "image": "",
+      "image": "/images/projects/mail-management-system/cover.png",
+      "role": "Software Engineer – Full-Stack & Platform Engineering",
+      "primaryTags": ["PHP", "MySQL", "Redis", "OpenShift", "GitHub Actions"],
       "accent": "blue",
-      "description": "A secure document-routing and approval platform for creating, distributing, tracking, and processing official correspondence across departments, with granular permissions, audit trails, PDF handling, dashboards, and search.",
-      "tags": ["PHP", "MySQL", "Docker", "Podman"],
-      "links": []
+      "description": "A production document-routing and approval platform for the Department of Agrarian Development, combining multi-level workflows, secure private document handling, audit trails, and controlled OpenShift releases.",
+      "tags": ["PHP", "MySQL", "Redis", "Red Hat OpenShift", "Kubernetes", "Kustomize", "GitHub Actions", "GHCR", "PVC", "Docker", "Podman", "PowerShell", "Linux"],
+      "links": [],
+      "details": {
+        "overview": "A production document-routing and approval platform developed for the Department of Agrarian Development to manage official correspondence across departments and divisions. The system supports multi-level approval workflows, document distribution and tracking, minute notes, organizational hierarchies, granular permission-based access control, private document storage, audit trails, dashboards, and administrative workflows.",
+        "highlights": [
+          "Developed full-stack application and database components using PHP and MySQL for document creation, distribution, approval, tracking, search, and administrative workflows.",
+          "Implemented role- and permission-based access controls, multi-level approval processes, comprehensive audit trails, private document handling, and Redis-backed application sessions.",
+          "Migrated the frontend runtime from VM-based deployment to a native Red Hat OpenShift architecture using Deployments, Services, Routes, ConfigMaps, Secrets, persistent volumes, and Kustomize.",
+          "Adapted the application container to operate as a non-root workload under OpenShift restricted security constraints.",
+          "Built a CI/CD release path using GitHub Actions, private GHCR container images, immutable image digests, and controlled OpenShift production deployment.",
+          "Developed production promotion and rollback tooling with release identity verification, health checks, persistent-storage validation, and post-deployment verification.",
+          "Performed production-candidate validation covering authentication, document access, uploads/downloads, persistent storage, database connectivity, Redis connectivity, readiness, and liveness."
+        ],
+        "architecture": {
+          "image": "/images/projects/mail-management-system/production-architecture.png",
+          "alt": "Mail Management System production architecture diagram",
+          "deployment": "Production architecture on Red Hat OpenShift with private document storage and Redis-backed sessions.",
+          "diagrams": [
+            {
+              "image": "/images/projects/mail-management-system/controlled-release.png",
+              "alt": "Mail Management System controlled production release diagram",
+              "deployment": "Controlled production promotion and rollback using GitHub Actions, private GHCR images, and immutable image digests."
+            }
+          ]
+        },
+        "gallery": []
+      }
     },
     {
       "slug": "farmernet",
       "title": "FarmerNet Web Platform",
-      "category": "Full-Stack Development",
-      "filter": "web",
+      "category": "Enterprise Workflows / Agricultural Data / Full-Stack",
+      "filters": ["enterprise"],
       "featured": false,
       "homepageOrder": 5,
       "previewLabel": "FW",
@@ -223,12 +254,46 @@
       "links": []
     },
     {
+      "slug": "nextcloud-openshift",
+      "title": "Nextcloud on OpenShift",
+      "category": "Private Cloud / Security / OpenShift / MCP Integration",
+      "filters": ["enterprise", "platform"],
+      "featured": false,
+      "homepageOrder": 6,
+      "previewLabel": "NC",
+      "image": "/images/projects/nextcloud-openshift/cover.png",
+      "role": "Platform & Integration Engineer",
+      "primaryTags": ["Nextcloud", "OpenShift", "PostgreSQL", "Redis", "MCP"],
+      "accent": "blue",
+      "description": "A private cloud file platform deployed natively on Red Hat OpenShift with persistent storage, dedicated PostgreSQL and Redis services, restricted container security, and a private MCP integration under controlled OAuth validation.",
+      "tags": ["Nextcloud", "Red Hat OpenShift", "Kubernetes", "Nginx", "PHP-FPM", "PostgreSQL", "Redis", "PVC", "MCP", "OAuth", "Auth0", "WebDAV", "AES-256-GCM"],
+      "links": [],
+      "details": {
+        "overview": "A separate native OpenShift Nextcloud deployment for the Department of Agrarian Development, designed for private file storage and a private MCP integration for ChatGPT. The stable application baseline combines PHP-FPM and Nginx, persistent file and database storage, dedicated PostgreSQL, and authenticated Redis. Multi-user MCP and OAuth integration remain under controlled validation, with end-to-end account linking and user isolation still pending.",
+        "highlights": [
+          "Deployed Nextcloud as a native OpenShift workload using PHP-FPM and Nginx, dedicated PostgreSQL, authenticated Redis, and persistent volume claims.",
+          "Adapted workloads to OpenShift restricted-v2 security with arbitrary runtime UIDs and no fixed-UID exception.",
+          "Kept database, cache, and MCP services private inside the cluster while exposing only Nextcloud through a public Route.",
+          "Established a private five-tool MCP baseline for file operations through Nextcloud WebDAV and OCS APIs using a dedicated non-admin account.",
+          "Developed a multi-user MCP runtime that uses verified OAuth identity and dedicated PostgreSQL persistence, with app-password material encrypted using AES-256-GCM.",
+          "Deployed a secure MCP tunnel runtime with an immutable image digest, read-only root filesystem, disabled service-account token automount, and health checks.",
+          "Validated restricted workload startup, readiness, rollout stability, and unauthenticated HTTP 401 responses; real ChatGPT OAuth and multi-user isolation remain under controlled validation."
+        ],
+        "architecture": {
+          "image": "/images/projects/nextcloud-openshift/architecture.png",
+          "alt": "Nextcloud on OpenShift system architecture diagram",
+          "deployment": "Native OpenShift file storage with private PostgreSQL, Redis, and MCP services; multi-user OAuth integration under controlled validation."
+        },
+        "gallery": []
+      }
+    },
+    {
       "slug": "air-quality-monitoring",
       "title": "Air Quality Display and Management Web Application",
-      "category": "Web Applications",
-      "filter": "web",
+      "category": "Environmental Monitoring / Data Visualization / Full-Stack",
+      "filters": ["monitoring"],
       "featured": false,
-      "homepageOrder": 9,
+      "homepageOrder": 10,
       "image": "",
       "accent": "cyan",
       "description": "An interactive web application for real-time air quality monitoring in Colombo. Users can view detailed air quality information while administrators manage sensor data and user access.",

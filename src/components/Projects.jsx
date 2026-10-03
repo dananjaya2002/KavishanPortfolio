@@ -23,7 +23,7 @@ function Projects({ projects }) {
   const homepageProjects = orderedProjects.filter((project) => project.homepageOrder).slice(0, 3);
   const filteredProjects = activeFilter === "all"
     ? orderedProjects
-    : orderedProjects.filter((project) => project.filter === activeFilter);
+    : orderedProjects.filter((project) => project.filters.includes(activeFilter));
   const visibleProjects = showAll ? filteredProjects : homepageProjects;
   const selectedIndex = selectedProject
     ? orderedProjects.findIndex((project) => project.slug === selectedProject.slug)
@@ -83,7 +83,7 @@ function Projects({ projects }) {
 
   return (
     <section id="projects" className="section">
-      <SectionHeader eyebrow="Selected work" title={projects.title} intro="Selected products and experiments across applied AI, mobile development and connected systems.">
+      <SectionHeader eyebrow="Selected work" title={projects.title} intro="Selected work across media streaming, applied AI, platform engineering, enterprise workflows, mobile experiences and connected systems.">
         {showAll && (
           <div className="filter-group" aria-label="Project filters">
             {projects.filters.map((filter) => (

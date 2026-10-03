@@ -595,6 +595,7 @@ h3 { line-height: 1.25; letter-spacing: -0.02em; }
 .project-modal-links a:hover { border-color: var(--line-strong); color: var(--text); }
 .architecture-diagram { display: grid; gap: 18px; border: 1px solid var(--line); border-radius: 14px; background: color-mix(in srgb, var(--surface) 72%, transparent); padding: clamp(18px, 3vw, 26px); }
 .architecture-image { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.architecture-image + .architecture-image { margin-top: 18px; }
 .architecture-image a { display: block; overflow: hidden; background: #050907; }
 .architecture-image img { display: block; width: 100%; height: auto; transition: transform 220ms ease; }
 .architecture-image a:hover img { transform: scale(1.01); }
