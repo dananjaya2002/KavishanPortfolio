@@ -209,7 +209,7 @@
         "overview": "A production document-routing and approval platform developed for the Department of Agrarian Development to manage official correspondence across departments and divisions. The system supports multi-level approval workflows, document distribution and tracking, minute notes, organizational hierarchies, granular permission-based access control, private document storage, audit trails, dashboards, and administrative workflows.",
         "highlights": [
           "Developed full-stack application and database components using PHP and MySQL for document creation, distribution, approval, tracking, search, and administrative workflows.",
-          "Implemented role- and permission-based access controls, multi-level approval processes, comprehensive audit trails, private document handling, and Redis-backed application sessions.",
+          "Implemented role and permission-based access controls, multi-level approval processes, comprehensive audit trails, private document handling, and Redis-backed application sessions.",
           "Migrated the frontend runtime from VM-based deployment to a native Red Hat OpenShift architecture using Deployments, Services, Routes, ConfigMaps, Secrets, persistent volumes, and Kustomize.",
           "Adapted the application container to operate as a non-root workload under OpenShift restricted security constraints.",
           "Built a CI/CD release path using GitHub Actions, private GHCR container images, immutable image digests, and controlled OpenShift production deployment.",
@@ -228,7 +228,23 @@
             }
           ]
         },
-        "gallery": []
+        "gallery": [
+          {
+            "src": "/images/projects/mail-management-system/Mail Management Dashboard.png",
+            "alt": "Mail Management System dashboard showing inbox, pending approvals, assigned letters, and recent correspondence",
+            "caption": "Dashboard bringing together inbox activity, pending approvals, assigned letters, and recent correspondence."
+          },
+          {
+            "src": "/images/projects/mail-management-system/Letter Overview Dashboard.png",
+            "alt": "Letter overview showing correspondence totals, priorities, recipients, and approval statuses",
+            "caption": "Letter overview for tracking correspondence, priorities, distribution, and approval status across the organization."
+          },
+          {
+            "src": "/images/projects/mail-management-system/Mail Approval Dashboard Interface.png",
+            "alt": "Multi-level letter approval interface showing completed approvals and minute notes with an optional reply attachment",
+            "caption": "Multi-level approval tracking with minute notes, comments, and optional reply-letter attachments."
+          }
+        ]
       }
     },
     {
@@ -284,7 +300,13 @@
           "alt": "Nextcloud on OpenShift system architecture diagram",
           "deployment": "Native OpenShift file storage with private PostgreSQL, Redis, and MCP services; multi-user OAuth integration under controlled validation."
         },
-        "gallery": []
+        "gallery": [
+          {
+            "src": "/images/projects/nextcloud-openshift/file_management.png",
+            "alt": "Nextcloud file management interface showing folders, files, sharing controls, search, and navigation",
+            "caption": "Private cloud file management with folder navigation, search, favorites, and sharing controls."
+          }
+        ]
       }
     },
     {
