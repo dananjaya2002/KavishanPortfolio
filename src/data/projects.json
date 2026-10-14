@@ -310,6 +310,55 @@
       }
     },
     {
+      "slug": "checkmk-monitoring",
+      "title": "Checkmk Infrastructure & Application Monitoring",
+      "category": "Monitoring / OpenShift Virtualization / Platform Engineering",
+      "filters": ["monitoring", "platform"],
+      "featured": false,
+      "homepageOrder": 11,
+      "previewLabel": "CM",
+      "image": "/images/projects/checkmk-monitoring/cover.png",
+      "role": "Platform & Monitoring Engineer",
+      "primaryTags": ["Checkmk", "OpenShift", "KubeVirt", "Ubuntu", "Podman"],
+      "accent": "green",
+      "description": "A centralized Checkmk Community monitoring deployment for the Department of Agrarian Development, hosted on an Ubuntu VM in OpenShift Virtualization. It brings together host health, service checks, container visibility, and HTTPS application endpoint monitoring through a dedicated OpenShift dashboard Route.",
+      "tags": ["Checkmk Community", "Red Hat OpenShift", "OpenShift Virtualization", "KubeVirt", "Ubuntu", "Linux", "Podman", "Docker", "HTTPS", "HLS"],
+      "links": [],
+      "details": {
+        "overview": "Deployed Checkmk Community on an existing Ubuntu monitoring VM in OpenShift Virtualization for the Department of Agrarian Development. The initial verified scope monitored the Mail backend VM; the supplied portfolio screenshots show an expanded monitoring view across hosts, Linux services, container workloads, and application endpoints. Dashboard access uses a dedicated OpenShift HTTPS Route and ClusterIP Service, with agent transport kept separate from the web endpoint.",
+        "highlights": [
+          "Installed and operated Checkmk Community on an existing Ubuntu VM hosted by OpenShift Virtualization.",
+          "Exposed the dashboard through an edge-TLS OpenShift Route and ClusterIP Service targeting the KubeVirt launcher with stable VM labels.",
+          "Verified Route admission, ready Service endpoints, HTTP-to-HTTPS redirection, and dashboard asset delivery.",
+          "Centralized host and service visibility, with supplied screenshots showing CPU, filesystem, inventory, and container runtime checks.",
+          "Presented HTTPS API, frontend, and HLS endpoint checks, including playlist content validation and response-time reporting.",
+          "Kept agent and receiver ports separate from dashboard ingress and accounted for the monitoring VM's limited resources."
+        ],
+        "architecture": {
+          "image": "/images/projects/checkmk-monitoring/architecture.png",
+          "alt": "Checkmk monitoring architecture showing an OpenShift HTTPS Route, ClusterIP Service, KubeVirt launcher, Ubuntu monitoring VM, and monitored workloads",
+          "deployment": "Checkmk Community on an Ubuntu VM in OpenShift Virtualization. Browser traffic uses HTTPS to the OpenShift router; edge termination forwards HTTP within the cluster to the VM."
+        },
+        "gallery": [
+          {
+            "src": "/images/projects/checkmk-monitoring/cover.png",
+            "alt": "Checkmk hosts overview with anonymized host names and service status totals",
+            "caption": "Hosts overview showing availability and service status across anonymized monitored entries."
+          },
+          {
+            "src": "/images/projects/checkmk-monitoring/services-monitoring.png",
+            "alt": "Checkmk service list showing Linux health, Docker container checks, and HTTPS application endpoints",
+            "caption": "Service monitoring across Linux resources, container workloads, APIs, frontend availability, and HLS endpoints."
+          },
+          {
+            "src": "/images/projects/checkmk-monitoring/endpoint-monitoring.png",
+            "alt": "Checkmk HTTPS HLS endpoint details showing HTTP status, playlist validation, response time, and performance history",
+            "caption": "HLS endpoint inspection with HTTP status, expected playlist content, response time, and performance history."
+          }
+        ]
+      }
+    },
+    {
       "slug": "air-quality-monitoring",
       "title": "Air Quality Display and Management Web Application",
       "category": "Environmental Monitoring / Data Visualization / Full-Stack",
