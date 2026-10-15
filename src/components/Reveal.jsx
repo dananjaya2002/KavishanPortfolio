@@ -9,6 +9,10 @@ function Reveal({ as: Tag = "div", className = "", delay = 0, children, ...props
     if (!element) {
       return undefined;
     }
+    if (!("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return undefined;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

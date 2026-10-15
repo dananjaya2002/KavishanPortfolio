@@ -20,7 +20,7 @@ function Projects({ projects }) {
     () => [...projects.items].sort((a, b) => (a.homepageOrder ?? 99) - (b.homepageOrder ?? 99)),
     [projects.items],
   );
-  const homepageProjects = orderedProjects.filter((project) => project.homepageOrder).slice(0, 3);
+  const homepageProjects = orderedProjects.filter((project) => project.homepageOrder).slice(0, 4);
   const filteredProjects = activeFilter === "all"
     ? orderedProjects
     : orderedProjects.filter((project) => project.filters.includes(activeFilter));
@@ -81,28 +81,39 @@ function Projects({ projects }) {
     setActiveFilter("all");
   };
 
+  const selectFilter = (value) => {
+    setActiveFilter(value);
+    setShowAll(value !== "all");
+  };
+
   return (
     <section id="projects" className="section">
-      <SectionHeader eyebrow="Selected work" title={projects.title} intro="Selected work across media streaming, applied AI, platform engineering, enterprise workflows, mobile experiences and connected systems.">
-        {showAll && (
-          <div className="filter-group" aria-label="Project filters">
-            {projects.filters.map((filter) => (
-              <button className={activeFilter === filter.value ? "is-active" : ""} key={filter.value} type="button" onClick={() => setActiveFilter(filter.value)}>
-                {filter.label}
-              </button>
-            ))}
-          </div>
-        )}
-      </SectionHeader>
+      <SectionHeader number="01" eyebrow="Selected work" title={projects.title} intro="Products, platforms, and experiments. Each one, a problem worth solving." />
+      <div className="filter-group" aria-label="Project filters">
+        {projects.filters.map((filter) => (
+          <button
+            className={activeFilter === filter.value ? "is-active" : ""}
+            key={filter.value}
+            type="button"
+            aria-pressed={activeFilter === filter.value}
+            onClick={() => selectFilter(filter.value)}
+          >
+            {filter.label}
+          </button>
+        ))}
+        <span className="collection-count" role="status">
+          {String(visibleProjects.length).padStart(2, "0")} / {String(filteredProjects.length).padStart(2, "0")} projects
+        </span>
+      </div>
 
       <div className="projects-grid" id="projects-grid">
         {visibleProjects.map((project, index) => {
-          const variant = project.homepageOrder === 1 ? "primary" : project.homepageOrder <= 3 ? "featured" : "standard";
+          const variant = project.homepageOrder === 1 ? "primary" : project.homepageOrder <= 4 ? "featured" : "standard";
           return <ProjectCard project={project} index={index} variant={variant} onOpen={openProject} key={project.slug} />;
         })}
       </div>
 
-      {projects.items.length > 3 && (
+      {projects.items.length > 4 && (
         <div className="projects-toggle-wrap">
           <button className="button secondary" type="button" aria-expanded={showAll} aria-controls="projects-grid" onClick={toggleAll}>
             {showAll ? "Show selected projects" : "View all projects"}

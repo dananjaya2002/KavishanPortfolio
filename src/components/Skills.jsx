@@ -6,6 +6,7 @@ function Skills({ skills }) {
   return (
     <section id="skills" className="section">
       <SectionHeader
+        number="04"
         eyebrow="Capabilities"
         title={skills.title}
         intro={skills.intro}
