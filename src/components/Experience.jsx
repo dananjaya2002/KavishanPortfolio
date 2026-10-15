@@ -5,10 +5,10 @@ import SectionHeader from "./SectionHeader.jsx";
 function Experience({ experience }) {
   return (
     <section id="experience" className="section section-toned">
-      <SectionHeader eyebrow="Experience" title={experience.title} intro={experience.intro} />
+      <SectionHeader number="03" eyebrow="The journey" title={experience.title} intro={experience.intro} />
       <div className="timeline">
         {experience.items.map((item, index) => (
-          <Reveal as="article" className="timeline-item" delay={index * 90} key={`${item.title}-${item.company}`}>
+          <Reveal as="article" className="timeline-item" delay={index * 90} key={`${item.title}-${item.company}-${item.dates}`}>
             <div className="timeline-marker" aria-hidden="true">
               <Icon name="Workflow" size={18} />
             </div>
@@ -43,6 +43,16 @@ function Experience({ experience }) {
           </Reveal>
         ))}
       </div>
+      {experience.education && (
+        <Reveal as="article" className="education-card">
+          <div><p className="eyebrow">Education</p><span>{experience.education.dates}</span></div>
+          <div>
+            <h3>{experience.education.degree}</h3>
+            <strong>{experience.education.classification}</strong>
+            <p>{experience.education.institution}</p>
+          </div>
+        </Reveal>
+      )}
     </section>
   );
 }

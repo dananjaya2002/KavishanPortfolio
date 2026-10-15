@@ -29,7 +29,7 @@ function Footer({ profile }) {
           className={`back-to-top ${isVisible ? "is-visible" : ""}`}
           type="button"
           aria-label="Back to top"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" })}
         >
           <Icon name="ArrowUpRight" />
         </button>

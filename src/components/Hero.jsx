@@ -1,35 +1,32 @@
 import { Icon } from "../iconMap.jsx";
-import CodeEditorCard from "./CodeEditorCard.jsx";
+import DeveloperVisual from "./DeveloperVisual.jsx";
 import Reveal from "./Reveal.jsx";
+import { HeadlineText, useStudioPointer } from "./StudioEffects.jsx";
 
-function Hero({ profile, onResumeOpen }) {
+function Hero({ profile, engineeringMode, onEngineeringModeChange, onResumeOpen }) {
+  const spotlightRef = useStudioPointer();
   return (
-    <section id="home" className="hero section">
-      <Reveal className="hero-copy">
-        <h1>{profile.name}</h1>
-        <p className="hero-title">{profile.role}</p>
-        <p className="hero-summary">{profile.summary}</p>
-        <div className="hero-actions">
-          <a className="button primary" href="#projects">
-            <Icon name="ArrowDown" />
-            View projects
-          </a>
-          <button className="button secondary" type="button" onClick={onResumeOpen}>
-            <Icon name="FileText" />
-            View resume
-          </button>
-        </div>
-        <div className="social-links hero-socials">
-          {profile.socials.map((social) => (
-            <a key={social.href} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
-              <Icon name={social.icon} />
-            </a>
-          ))}
-        </div>
-      </Reveal>
-      <Reveal className="hero-editor" delay={120}>
-        <CodeEditorCard />
-      </Reveal>
+    <section ref={spotlightRef} id="home" className="hero section">
+      <div className="hero-layout">
+        <Reveal className="hero-copy">
+          <p className="hero-identity">{profile.hero.identity}</p>
+          <h1 aria-label={profile.name}><span aria-hidden="true"><HeadlineText text={profile.name} /></span></h1>
+          <p className="hero-headline">{profile.hero.headline}</p>
+          <p className="hero-summary">{profile.hero.summary}</p>
+          <div className="hero-actions">
+            <a className="button primary" href="#projects"><Icon name="ArrowDown" />Explore Work</a>
+            <button className="button secondary" type="button" onClick={onResumeOpen}><Icon name="FileText" />View Resume</button>
+          </div>
+          <div className="social-links hero-socials" aria-label="Social profiles">
+            {profile.socials.map((social) => (
+              <a key={social.href} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}><Icon name={social.icon} size={18} /></a>
+            ))}
+          </div>
+        </Reveal>
+        <Reveal className="hero-visual" delay={120}>
+          <DeveloperVisual engineeringMode={engineeringMode} onEngineeringModeChange={onEngineeringModeChange} />
+        </Reveal>
+      </div>
     </section>
   );
 }

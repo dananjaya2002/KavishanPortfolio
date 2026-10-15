@@ -1,10 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Icon } from "../iconMap.jsx";
 
 function Navbar({ brand, nav, theme, onThemeToggle, onResumeOpen }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeHref, setActiveHref] = useState("");
+  const menuButtonRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [isOpen]);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 16);
@@ -43,20 +56,23 @@ function Navbar({ brand, nav, theme, onThemeToggle, onResumeOpen }) {
         {brand}
       </a>
       <button
+        ref={menuButtonRef}
         className="icon-button menu-button"
         type="button"
         aria-label="Toggle navigation"
         aria-expanded={isOpen}
+        aria-controls="primary-navigation"
         onClick={() => setIsOpen((value) => !value)}
       >
         <Icon name={isOpen ? "X" : "Menu"} />
       </button>
-      <nav className={`nav-links ${isOpen ? "is-open" : ""}`} aria-label="Primary navigation">
+      <nav id="primary-navigation" className={`nav-links ${isOpen ? "is-open" : ""}`} aria-label="Primary navigation">
         {nav.map((item) => (
           <a
             key={item.href}
             href={item.href}
             className={activeHref === item.href ? "is-active" : ""}
+            aria-current={activeHref === item.href ? "location" : undefined}
             onClick={() => setIsOpen(false)}
           >
             {item.label}

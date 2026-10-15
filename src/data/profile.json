@@ -2,6 +2,16 @@
   "brand": "DK.Dev",
   "name": "Danidu Kavishan",
   "title": "Software Developer",
+  "location": "Colombo, Sri Lanka",
+  "portrait": "/images/profile image.jpg",
+  "hero": {
+    "identity": "Software Engineer",
+    "headline": "Building software people rely on.",
+    "summary": "I build dependable web, mobile, and AI systems, from clear user experiences to reliable deployment.",
+    "subheading": "Real-world",
+    "emphasis": "impact",
+    "stack": ["Python", "React", "Flutter", "Cloud"]
+  },
   "role": "Software developer building AI-powered mobile and web products.",
   "summary": "I build dependable AI, mobile, and web products with Python, React, Flutter, and modern cloud tools.",
   "typingText": [

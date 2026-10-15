@@ -14,17 +14,22 @@ function projectUrl(slug) {
 function Projects({ projects }) {
   const [activeFilter, setActiveFilter] = useState("all");
   const [showAll, setShowAll] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedProject, setSelectedProject] = useState(null);
   const openedInternallyRef = useRef(false);
   const orderedProjects = useMemo(
     () => [...projects.items].sort((a, b) => (a.homepageOrder ?? 99) - (b.homepageOrder ?? 99)),
     [projects.items],
   );
-  const homepageProjects = orderedProjects.filter((project) => project.homepageOrder).slice(0, 3);
-  const filteredProjects = activeFilter === "all"
+  const homepageProjects = orderedProjects.filter((project) => project.homepageOrder).slice(0, 4);
+  const categoryProjects = activeFilter === "all"
     ? orderedProjects
     : orderedProjects.filter((project) => project.filters.includes(activeFilter));
-  const visibleProjects = showAll ? filteredProjects : homepageProjects;
+  const query = searchTerm.trim().toLowerCase();
+  const filteredProjects = categoryProjects.filter((project) => !query ||
+    [project.title, project.description, ...project.tags].join(" ").toLowerCase().includes(query));
+  const visibleProjects = showAll || query ? filteredProjects : homepageProjects;
+  const rows = Array.from({ length: Math.ceil(visibleProjects.length / 2) }, (_, row) => visibleProjects.slice(row * 2, row * 2 + 2));
   const selectedIndex = selectedProject
     ? orderedProjects.findIndex((project) => project.slug === selectedProject.slug)
     : -1;
@@ -79,30 +84,51 @@ function Projects({ projects }) {
   const toggleAll = () => {
     setShowAll((current) => !current);
     setActiveFilter("all");
+    setSearchTerm("");
+  };
+
+  const selectFilter = (value) => {
+    setActiveFilter(value);
+    setShowAll(value !== "all");
   };
 
   return (
     <section id="projects" className="section">
-      <SectionHeader eyebrow="Selected work" title={projects.title} intro="Selected work across media streaming, applied AI, platform engineering, enterprise workflows, mobile experiences and connected systems.">
-        {showAll && (
-          <div className="filter-group" aria-label="Project filters">
-            {projects.filters.map((filter) => (
-              <button className={activeFilter === filter.value ? "is-active" : ""} key={filter.value} type="button" onClick={() => setActiveFilter(filter.value)}>
-                {filter.label}
-              </button>
-            ))}
-          </div>
-        )}
-      </SectionHeader>
-
-      <div className="projects-grid" id="projects-grid">
-        {visibleProjects.map((project, index) => {
-          const variant = project.homepageOrder === 1 ? "primary" : project.homepageOrder <= 3 ? "featured" : "standard";
-          return <ProjectCard project={project} index={index} variant={variant} onOpen={openProject} key={project.slug} />;
-        })}
+      <SectionHeader number="01" eyebrow="Selected work" title={projects.title} intro="Products, platforms, and experiments. Each one, a problem worth solving." />
+      <label className="project-search">
+        <span>Search the collection</span>
+        <input type="search" placeholder="Project, technology, or idea…" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
+        <Icon name="ArrowUpRight" size={17} />
+      </label>
+      <div className="filter-group" aria-label="Project filters">
+        {projects.filters.map((filter) => (
+          <button
+            className={activeFilter === filter.value ? "is-active" : ""}
+            key={filter.value}
+            type="button"
+            aria-pressed={activeFilter === filter.value}
+            onClick={() => selectFilter(filter.value)}
+          >
+            {filter.label}
+          </button>
+        ))}
+        <span className="collection-count" role="status">
+          {String(visibleProjects.length).padStart(2, "0")} / {String(filteredProjects.length).padStart(2, "0")} projects
+        </span>
       </div>
 
-      {projects.items.length > 3 && (
+      <div className="projects-grid" id="projects-grid">
+        {rows.map((row) => (
+          <div className="spotlight-row" key={row.map((project) => project.slug).join("-")}>
+            {row.map((project) => (
+              <ProjectCard project={project} index={orderedProjects.indexOf(project)} variant={project.homepageOrder <= 4 ? "featured" : "standard"} onOpen={openProject} key={project.slug} />
+            ))}
+          </div>
+        ))}
+      </div>
+      {visibleProjects.length === 0 && <p className="projects-empty" role="status">No projects match this search. Try another technology or category.</p>}
+
+      {projects.items.length > 4 && (
         <div className="projects-toggle-wrap">
           <button className="button secondary" type="button" aria-expanded={showAll} aria-controls="projects-grid" onClick={toggleAll}>
             {showAll ? "Show selected projects" : "View all projects"}

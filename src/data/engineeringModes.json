@@ -1,0 +1,5 @@
+[
+  { "id": "full-stack", "name": "Full-Stack Engineering" },
+  { "id": "platform", "name": "Platform Engineering" },
+  { "id": "ai", "name": "Applied AI" }
+]
