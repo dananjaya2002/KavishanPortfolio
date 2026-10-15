@@ -485,6 +485,16 @@ h3 { line-height: 1.25; letter-spacing: -0.02em; }
 .about-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr); gap: clamp(48px, 8vw, 110px); align-items: start; }
 .about-copy { max-width: 720px; font-size: 1.08rem; }
 .about-copy p { margin-bottom: 22px; }
+.about-profile { min-width: 0; }
+.about-portrait {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin-bottom: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
 .text-link { display: inline-flex; align-items: center; gap: 7px; border: 0; background: transparent; color: var(--primary); padding: 0; cursor: pointer; font-weight: 840; }
 .text-link:hover { color: var(--text); }
 .highlight-list { display: grid; border-top: 1px solid var(--line); }

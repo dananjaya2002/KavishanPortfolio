@@ -16,13 +16,24 @@ function About({ about, onResumeOpen }) {
             Read my resume <Icon name="ArrowUpRight" size={17} />
           </button>
         </Reveal>
-        <Reveal className="highlight-list" delay={120}>
+        <Reveal className="about-profile" delay={120}>
+          <img
+            className="about-portrait"
+            src="/images/profile image.jpg"
+            alt="Danidu Kavishan"
+            width={1024}
+            height={1536}
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="highlight-list">
             {about.highlights.map((item) => (
               <div className="highlight-item" key={item.label}>
                 <span>{item.label}</span>
                 <strong>{item.value}</strong>
               </div>
             ))}
+          </div>
         </Reveal>
       </div>
     </section>
