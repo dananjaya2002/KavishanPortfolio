@@ -49,6 +49,7 @@ function Navbar({ brand, nav, theme, onThemeToggle, onResumeOpen }) {
 
   return (
     <header className={`navbar ${isScrolled ? "is-scrolled" : ""}`}>
+      <div className="navbar-inner">
       <a className="brand" href="#home" onClick={() => setIsOpen(false)}>
         <span className="brand-mark">
           <Icon name="Code2" size={18} />
@@ -90,6 +91,7 @@ function Navbar({ brand, nav, theme, onThemeToggle, onResumeOpen }) {
           Resume
         </button>
       </nav>
+      </div>
     </header>
   );
 }
