@@ -17,7 +17,7 @@ A responsive personal portfolio for showcasing my software projects, technical s
 
 ## Visual design
 
-The Ivory & Ink redesign was explored and refined through Lovable, then adapted into this existing React/Vite codebase. It uses locally bundled typography, light/dark themes, numbered sections, an interactive developer visual, and four selected projects with the full collection available through filters and expansion.
+The dark engineering-studio design uses a navy/cyan palette, a CSS 3D holographic cube, a short session-scoped boot intro, and an elastic two-column project grid. It was adapted from the existing Lovable reference into this React/Vite codebase. Saved light/dark preferences, original media, all 11 projects, search/filtering, and shareable case studies remain available.
 
 See [the design system](docs/design-system.md) for tokens, responsive layout, media rules, accessibility behavior, and the prototype reference. Portfolio content and original assets remain the source of truth; the prototype is not a production deployment.
 

@@ -1,48 +1,31 @@
 import { Icon } from "../iconMap.jsx";
 import DeveloperVisual from "./DeveloperVisual.jsx";
 import Reveal from "./Reveal.jsx";
+import { HeadlineText, useStudioPointer } from "./StudioEffects.jsx";
 
-function Hero({ profile, onResumeOpen }) {
+function Hero({ profile, engineeringMode, onEngineeringModeChange, onResumeOpen }) {
+  const spotlightRef = useStudioPointer();
   return (
-    <section id="home" className="hero section">
-      <div className="hero-topline">
-        <span><span className="status-dot" /> {profile.title}</span>
-        <a href="#contact">{profile.location} <Icon name="ArrowUpRight" size={14} /></a>
-      </div>
+    <section ref={spotlightRef} id="home" className="hero section">
       <div className="hero-layout">
         <Reveal className="hero-copy">
-          <p className="hero-intro">Hello, I’m {profile.name}.</p>
-          <h1>
-            {profile.hero.headline}<br />
-            {profile.hero.subheading} <span>{profile.hero.emphasis}<span className="accent-period">.</span></span>
-          </h1>
-          <p className="hero-summary">{profile.summary}</p>
+          <p className="hero-identity">{profile.hero.identity}</p>
+          <h1 aria-label={profile.name}><span aria-hidden="true"><HeadlineText text={profile.name} /></span></h1>
+          <p className="hero-headline">{profile.hero.headline}</p>
+          <p className="hero-summary">{profile.hero.summary}</p>
           <div className="hero-actions">
-            <a className="button primary" href="#projects">
-              <Icon name="ArrowDown" />
-              Explore my work
-            </a>
-            <button className="button secondary" type="button" onClick={onResumeOpen}>
-              <Icon name="FileText" />
-              View resume
-            </button>
+            <a className="button primary" href="#projects"><Icon name="ArrowDown" />Explore Work</a>
+            <button className="button secondary" type="button" onClick={onResumeOpen}><Icon name="FileText" />View Resume</button>
           </div>
-          <div className="social-links hero-socials">
+          <div className="social-links hero-socials" aria-label="Social profiles">
             {profile.socials.map((social) => (
-              <a key={social.href} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
-                <Icon name={social.icon} />
-              </a>
+              <a key={social.href} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}><Icon name={social.icon} size={18} /></a>
             ))}
           </div>
-          <p className="hero-stack"><span>Built with intent.</span> {profile.hero.stack.join(" / ")}</p>
         </Reveal>
         <Reveal className="hero-visual" delay={120}>
-          <DeveloperVisual />
+          <DeveloperVisual engineeringMode={engineeringMode} onEngineeringModeChange={onEngineeringModeChange} />
         </Reveal>
-      </div>
-      <div className="hero-foot">
-        <span>Engineering with curiosity. Designing with purpose.</span>
-        <a href="#projects">Scroll to explore <Icon name="ArrowDown" size={15} /></a>
       </div>
     </section>
   );

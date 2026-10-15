@@ -43,6 +43,16 @@ function Experience({ experience }) {
           </Reveal>
         ))}
       </div>
+      {experience.education && (
+        <Reveal as="article" className="education-card">
+          <div><p className="eyebrow">Education</p><span>{experience.education.dates}</span></div>
+          <div>
+            <h3>{experience.education.degree}</h3>
+            <strong>{experience.education.classification}</strong>
+            <p>{experience.education.institution}</p>
+          </div>
+        </Reveal>
+      )}
     </section>
   );
 }

@@ -5,7 +5,9 @@
   "location": "Colombo, Sri Lanka",
   "portrait": "/images/profile image.jpg",
   "hero": {
-    "headline": "Thoughtful code.",
+    "identity": "Software Engineer",
+    "headline": "Building software people rely on.",
+    "summary": "I build dependable web, mobile, and AI systems, from clear user experiences to reliable deployment.",
     "subheading": "Real-world",
     "emphasis": "impact",
     "stack": ["Python", "React", "Flutter", "Cloud"]

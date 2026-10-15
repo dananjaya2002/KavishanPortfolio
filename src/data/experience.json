@@ -1,6 +1,12 @@
 {
   "title": "Work Experience",
   "intro": "Professional software engineering experience delivering and maintaining digital systems for Sri Lanka's Department of Agrarian Development.",
+  "education": {
+    "degree": "BSc (Hons) Computer Science",
+    "classification": "First Class Honours",
+    "institution": "University of Plymouth, UK · Delivered at NSBM Green University",
+    "dates": "Mar 2023 – Jul 2026"
+  },
   "items": [
     {
       "title": "Software Engineer",

@@ -7,7 +7,15 @@
       name="description"
       content="Danidu Kavishan is a software developer building applied AI, mobile, and web products with Python, React, and Flutter."
     />
-    <meta name="theme-color" content="#faf8f3" />
+    <meta name="theme-color" content="#060C18" />
+    <script>
+      try { document.documentElement.dataset.theme = localStorage.getItem("theme") === "light" ? "light" : "dark"; }
+      catch { document.documentElement.dataset.theme = "dark"; }
+      try {
+        const mode = localStorage.getItem("engineering-mode");
+        document.documentElement.dataset.engineeringMode = ["full-stack", "platform", "ai"].includes(mode) ? mode : "full-stack";
+      } catch { document.documentElement.dataset.engineeringMode = "full-stack"; }
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Danidu Kavishan | Software Developer" />
     <meta property="og:description" content="Applied AI, mobile, and web projects built with a focus on useful, dependable software." />
