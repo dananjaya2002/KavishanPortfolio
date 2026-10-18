@@ -6,91 +6,284 @@
       "title": "Programming Languages",
       "icon": "Code2",
       "skills": [
-        { "name": "JavaScript", "icon": "Braces" },
-        { "name": "TypeScript", "icon": "FileCode2" },
-        { "name": "PHP", "icon": "Code2" },
-        { "name": "Python", "icon": "Terminal" },
-        { "name": "SQL", "icon": "Database" },
-        { "name": "Dart", "icon": "Smartphone" }
-      ]
+        {
+          "name": "JavaScript",
+          "icon": "Braces",
+          "description": "Interactive browser behavior and application logic."
+        },
+        {
+          "name": "TypeScript",
+          "icon": "FileCode2",
+          "description": "Typed JavaScript for clearer application contracts."
+        },
+        {
+          "name": "PHP",
+          "icon": "Code2",
+          "description": "Server-side application logic and web development."
+        },
+        {
+          "name": "Python",
+          "icon": "Terminal",
+          "description": "API services, scripting, and AI integration."
+        },
+        {
+          "name": "SQL",
+          "icon": "Database",
+          "description": "Queries and data manipulation in relational databases."
+        },
+        {
+          "name": "Dart",
+          "icon": "Smartphone",
+          "description": "Application logic for Flutter interfaces."
+        }
+      ],
+      "label": "Languages"
     },
     {
-      "title": "Front-End & Mobile",
+      "title": "Front-End Development",
       "icon": "Smartphone",
       "skills": [
-        { "name": "React", "icon": "Atom" },
-        { "name": "HTML", "icon": "Layout" },
-        { "name": "CSS", "icon": "Braces" },
-        { "name": "Flutter", "icon": "Smartphone" },
-        { "name": "React Native", "icon": "MonitorSmartphone" }
-      ]
+        {
+          "name": "React",
+          "icon": "Atom",
+          "description": "Component-based interfaces and reusable UI state."
+        },
+        {
+          "name": "HTML",
+          "icon": "Layout",
+          "description": "Semantic structure for accessible web pages."
+        },
+        {
+          "name": "CSS",
+          "icon": "Braces",
+          "description": "Responsive layouts and visual styling."
+        },
+        {
+          "name": "JavaScript",
+          "icon": "Braces",
+          "description": "Interactive browser behavior and application logic."
+        },
+        {
+          "name": "TypeScript",
+          "icon": "FileCode2",
+          "description": "Typed JavaScript for clearer application contracts."
+        }
+      ],
+      "label": "Frontend"
     },
     {
       "title": "Back-End Development",
       "icon": "Server",
       "skills": [
-        { "name": "Node.js", "icon": "Server" },
-        { "name": "Express.js", "icon": "Workflow" },
-        { "name": "FastAPI", "icon": "Activity" },
-        { "name": "PHP", "icon": "Code2" },
-        { "name": "REST APIs", "icon": "Network" }
+        {
+          "name": "Node.js",
+          "icon": "Server",
+          "description": "JavaScript runtime for backend services."
+        },
+        {
+          "name": "Express.js",
+          "icon": "Workflow",
+          "description": "Routing and middleware for Node.js APIs."
+        },
+        {
+          "name": "FastAPI",
+          "icon": "Activity",
+          "description": "Python framework for typed HTTP APIs."
+        },
+        {
+          "name": "PHP",
+          "icon": "Code2",
+          "description": "Server-side request handling and application logic."
+        },
+        {
+          "name": "REST APIs",
+          "icon": "Network",
+          "description": "HTTP interfaces that connect clients and services."
+        }
+      ],
+      "label": "Backend"
+    },
+    {
+      "title": "Mobile Development",
+      "label": "Mobile",
+      "icon": "Smartphone",
+      "skills": [
+        {
+          "name": "Flutter",
+          "icon": "Smartphone",
+          "description": "Cross-platform mobile interfaces built with Dart."
+        },
+        {
+          "name": "React Native",
+          "icon": "MonitorSmartphone",
+          "description": "Mobile interfaces using React components."
+        }
       ]
     },
     {
       "title": "Databases",
       "icon": "Database",
       "skills": [
-        { "name": "MySQL", "icon": "Database" },
-        { "name": "SQLite", "icon": "Table2" },
-        { "name": "Firebase", "icon": "Flame" },
-        { "name": "Qdrant", "icon": "HardDrive" }
-      ]
+        {
+          "name": "MySQL",
+          "icon": "Database",
+          "description": "Relational storage and structured application queries."
+        },
+        {
+          "name": "SQLite",
+          "icon": "Table2",
+          "description": "Embedded relational storage for lightweight applications."
+        },
+        {
+          "name": "Firebase",
+          "icon": "Flame",
+          "description": "Managed application data and backend services."
+        },
+        {
+          "name": "Qdrant",
+          "icon": "HardDrive",
+          "description": "Vector storage and similarity search for retrieval workflows."
+        }
+      ],
+      "label": "Databases"
     },
     {
       "title": "AI & Machine Learning",
       "icon": "Brain",
       "skills": [
-        { "name": "Retrieval-Augmented Generation (RAG)", "icon": "Brain" },
-        { "name": "Local LLM Deployment", "icon": "Server" },
-        { "name": "llama.cpp", "icon": "Code2" },
-        { "name": "Open WebUI", "icon": "Globe" },
-        { "name": "TensorFlow Lite", "icon": "Activity" }
-      ]
+        {
+          "name": "Retrieval-Augmented Generation (RAG)",
+          "icon": "Brain",
+          "description": "Grounding model responses in retrieved application knowledge."
+        },
+        {
+          "name": "Local LLM Deployment",
+          "icon": "Server",
+          "description": "Running language models on local infrastructure."
+        },
+        {
+          "name": "llama.cpp",
+          "icon": "Code2",
+          "description": "Local language-model inference and serving."
+        },
+        {
+          "name": "Open WebUI",
+          "icon": "Globe",
+          "description": "A web interface for interacting with hosted language models."
+        },
+        {
+          "name": "TensorFlow Lite",
+          "icon": "Activity",
+          "description": "On-device inference for lightweight machine-learning models."
+        }
+      ],
+      "label": "AI / ML"
     },
     {
       "title": "Authentication & Security",
       "icon": "Hash",
       "skills": [
-        { "name": "Session-Based Authentication", "icon": "Hash" },
-        { "name": "Role-Based Access Control", "icon": "Network" },
-        { "name": "Permission-Based Access Control", "icon": "Network" },
-        { "name": "API Authentication", "icon": "Workflow" },
-        { "name": "Rate Limiting", "icon": "Activity" }
-      ]
+        {
+          "name": "Session-Based Authentication",
+          "icon": "Hash",
+          "description": "Server-managed sessions for authenticated application access."
+        },
+        {
+          "name": "Role-Based Access Control",
+          "icon": "Network",
+          "description": "Access rules based on user roles."
+        },
+        {
+          "name": "Permission-Based Access Control",
+          "icon": "Network",
+          "description": "Fine-grained access rules for specific actions."
+        },
+        {
+          "name": "API Authentication",
+          "icon": "Workflow",
+          "description": "Protecting API endpoints and validating caller access."
+        },
+        {
+          "name": "Rate Limiting",
+          "icon": "Activity",
+          "description": "Controlling request frequency to protect services."
+        }
+      ],
+      "label": "Security"
     },
     {
       "title": "DevOps & Infrastructure",
       "icon": "Container",
       "skills": [
-        { "name": "Docker", "icon": "Container" },
-        { "name": "Docker Compose", "icon": "Boxes" },
-        { "name": "Podman", "icon": "Container" },
-        { "name": "Red Hat OpenShift", "icon": "Cloud" },
-        { "name": "OpenShift Virtualization", "icon": "Cloud" },
-        { "name": "Virtual Machines (VMs)", "icon": "MonitorSmartphone" },
-        { "name": "Linux", "icon": "Terminal" },
-        { "name": "Nginx", "icon": "Server" },
-        { "name": "SSH", "icon": "Terminal" }
-      ]
+        {
+          "name": "Docker",
+          "icon": "Container",
+          "description": "Packaging applications and dependencies as containers."
+        },
+        {
+          "name": "Docker Compose",
+          "icon": "Boxes",
+          "description": "Defining and running multi-container application stacks."
+        },
+        {
+          "name": "Podman",
+          "icon": "Container",
+          "description": "Building and running containers with a daemonless engine."
+        },
+        {
+          "name": "Red Hat OpenShift",
+          "icon": "Cloud",
+          "description": "Deploying and managing container workloads."
+        },
+        {
+          "name": "OpenShift Virtualization",
+          "icon": "Cloud",
+          "description": "Managing virtual-machine workloads on OpenShift."
+        },
+        {
+          "name": "Virtual Machines (VMs)",
+          "icon": "MonitorSmartphone",
+          "description": "Isolated operating-system environments for application workloads."
+        },
+        {
+          "name": "Linux",
+          "icon": "Terminal",
+          "description": "Operating and troubleshooting application environments."
+        },
+        {
+          "name": "Nginx",
+          "icon": "Server",
+          "description": "Reverse proxying and serving web applications."
+        },
+        {
+          "name": "SSH",
+          "icon": "Terminal",
+          "description": "Secure remote access to application infrastructure."
+        }
+      ],
+      "label": "Cloud & DevOps"
     },
     {
       "title": "Tools & Platforms",
       "icon": "Boxes",
       "skills": [
-        { "name": "Git", "icon": "Workflow" },
-        { "name": "GitHub", "icon": "Github" },
-        { "name": "phpMyAdmin", "icon": "Database" }
-      ]
+        {
+          "name": "Git",
+          "icon": "Workflow",
+          "description": "Version control for tracking and reviewing source changes."
+        },
+        {
+          "name": "GitHub",
+          "icon": "Github",
+          "description": "Repository hosting and collaborative code review."
+        },
+        {
+          "name": "phpMyAdmin",
+          "icon": "Database",
+          "description": "A web interface for inspecting and managing MySQL data."
+        }
+      ],
+      "label": "Dev Tools"
     }
   ]
 }

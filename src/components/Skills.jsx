@@ -3,10 +3,17 @@ import { Icon } from "../iconMap.jsx";
 import SectionHeader from "./SectionHeader.jsx";
 
 function Skills({ skills }) {
-  const [active, setActive] = useState(0);
-  const [selectedSkill, setSelectedSkill] = useState(skills.categories[0].skills[0].name);
+  const initial = Math.max(0, skills.categories.findIndex((category) => category.label === "Frontend"));
+  const [active, setActive] = useState(initial);
+  const [selectedSkill, setSelectedSkill] = useState(skills.categories[initial].skills[0].name);
+  const [paused, setPaused] = useState(false);
   const tabRefs = useRef([]);
-
+  const category = skills.categories[active];
+  const detail = category.skills.find((skill) => skill.name === selectedSkill);
+  const positions = skills.categories.map((_, index) => {
+    const angle = (Math.PI * 2 * index) / skills.categories.length - Math.PI / 2;
+    return { x: 50 + Math.cos(angle) * 34, y: 50 + Math.sin(angle) * 36 };
+  });
   const selectCategory = (index) => {
     setActive(index);
     setSelectedSkill(skills.categories[index].skills[0].name);
@@ -26,53 +33,54 @@ function Skills({ skills }) {
   return (
     <section id="skills" className="section">
       <SectionHeader number="04" eyebrow="Capabilities" title={skills.title} intro={skills.intro} />
-      <div className="skills-explorer">
-        <div className="skills-categories" role="tablist" aria-label="Skill categories" aria-orientation="vertical">
-          {skills.categories.map((category, index) => (
-            <button key={category.title} ref={(element) => { tabRefs.current[index] = element; }}
-              id={`skill-tab-${index}`} type="button" role="tab" aria-selected={active === index}
-              aria-controls={`skill-panel-${index}`} tabIndex={active === index ? 0 : -1}
-              onClick={() => selectCategory(index)} onKeyDown={(event) => handleKeyDown(event, index)}>
-              <Icon name={category.icon} size={18} /><span>{category.title}</span><Icon name="ArrowUpRight" size={15} />
+      <div className={`skills-explorer${paused ? " skills-paused" : ""}`}>
+        <div className="skills-universe">
+          <div className="skills-universe-heading">
+            <p className="eyebrow">Interactive skills universe</p>
+            <button type="button" className="skills-motion" aria-pressed={paused} onClick={() => setPaused(!paused)}>
+              {paused ? "Resume motion" : "Pause motion"}
             </button>
-          ))}
+          </div>
+          <div className="skills-map">
+            <svg className="skills-paths" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <ellipse cx="50" cy="50" rx="34" ry="36" />
+              {positions.map(({ x, y }, index) => <line key={index} x1="50" y1="50" x2={x} y2={y} className={active === index ? "is-active" : ""} />)}
+            </svg>
+            <div className="skills-hub" aria-hidden="true">
+              <div className="skills-cube">{["front", "back", "left", "right", "top", "bottom"].map((face) => <span key={face} className={`skills-face skills-face-${face}`} />)}</div>
+            </div>
+            <div className="skills-categories" role="tablist" aria-label="Skill categories">
+              {skills.categories.map((item, index) => (
+                <button key={item.title} ref={(element) => { tabRefs.current[index] = element; }}
+                  style={{ "--node-x": `${positions[index].x}%`, "--node-y": `${positions[index].y}%` }}
+                  id={`skill-tab-${index}`} type="button" role="tab" aria-selected={active === index}
+                  aria-controls={`skill-panel-${index}`} tabIndex={active === index ? 0 : -1}
+                  onClick={() => selectCategory(index)} onKeyDown={(event) => handleKeyDown(event, index)}>
+                  <Icon name={item.icon} size={18} /><span>{item.label || item.title}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="skills-map-hint">Select a category / Arrow keys to explore</p>
         </div>
-        {skills.categories.map((category, index) => (
-          <div key={category.title} id={`skill-panel-${index}`} role="tabpanel"
-            aria-labelledby={`skill-tab-${index}`} className="skills-panel" hidden={active !== index} tabIndex={0}>
-            {active === index && <>
-              <div className="skills-panel-copy">
-                <p className="eyebrow">Explore the toolkit</p>
-                <h3>{category.title}</h3>
-                <p className="skills-hint">Select a skill to highlight it in the network.</p>
-                <ul className="skill-chip-list">
-                  {category.skills.map((skill, skillIndex) => (
-                    <li key={skill.name}>
-                      <button className="skill-chip" type="button" aria-pressed={selectedSkill === skill.name}
-                        style={{ "--skill-index": skillIndex }} onClick={() => setSelectedSkill(skill.name)}>
-                        <Icon name={skill.icon} size={18} />{skill.name}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
+        {skills.categories.map((item, index) => (
+          <div key={item.title} id={`skill-panel-${index}`} role="tabpanel" aria-labelledby={`skill-tab-${index}`}
+            className="skills-panel" hidden={active !== index} tabIndex={0}>
+            {<div className="skills-panel-content">
+              <div className="skills-panel-heading"><p className="eyebrow">Explore the toolkit</p><h3>{item.title}</h3></div>
+              <p className="skills-hint">Select a technology to explore its role.</p>
+              <ul className="skill-chip-list">
+                {item.skills.map((skill) => <li key={skill.name}>
+                  <button className="skill-chip" type="button" aria-pressed={selectedSkill === skill.name}
+                    aria-controls="skill-detail" onClick={() => setSelectedSkill(skill.name)}>
+                    <Icon name={skill.icon} size={16} /><span>{skill.name}</span>
+                  </button>
+                </li>)}
+              </ul>
+              <div id={active === index ? "skill-detail" : undefined} className="skill-detail" aria-live={active === index ? "polite" : "off"} aria-atomic="true">
+                <p className="eyebrow">Technology spotlight</p><h4>{(active === index ? detail : item.skills[0]).name}</h4><p>{(active === index ? detail : item.skills[0]).description}</p>
               </div>
-              <div className="skills-network">
-                <svg viewBox="0 0 320 220" aria-hidden="true" style={{ "--network-angle": `${index * 13}deg` }}>
-                  <ellipse cx="160" cy="110" rx="110" ry="76" className="network-orbit" />
-                  <ellipse cx="160" cy="110" rx="75" ry="104" className="network-orbit network-orbit-secondary" />
-                  {category.skills.map((skill, skillIndex) => {
-                    const angle = (Math.PI * 2 * skillIndex) / category.skills.length - Math.PI / 2;
-                    const x = 160 + Math.cos(angle) * 110;
-                    const y = 110 + Math.sin(angle) * 76;
-                    return <g key={skill.name} className={selectedSkill === skill.name ? "network-node is-selected" : "network-node"}>
-                      <line x1="160" y1="110" x2={x} y2={y} /><circle cx={x} cy={y} r={selectedSkill === skill.name ? 7 : 4} />
-                    </g>;
-                  })}
-                  <circle cx="160" cy="110" r="22" className="network-core" />
-                </svg>
-                <p className="network-selection" aria-live="polite">{selectedSkill}</p>
-              </div>
-            </>}
+            </div>}
           </div>
         ))}
       </div>
